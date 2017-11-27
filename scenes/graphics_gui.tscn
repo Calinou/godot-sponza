@@ -1,0 +1,165 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/graphics_gui.gd" type="Script" id=1]
+[ext_resource path="res://fonts/inter_ui_medium.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+bg_color = Color( 0.141176, 0.141176, 0.141176, 1 )
+draw_center = true
+border_width_left = 0
+border_width_top = 0
+border_width_right = 0
+border_width_bottom = 0
+border_color = Color( 0, 0, 0, 0 )
+border_blend = true
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 0
+corner_detail = 8
+expand_margin_left = 0.0
+expand_margin_right = 0.0
+expand_margin_top = 0.0
+expand_margin_bottom = 0.0
+shadow_color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+shadow_size = 3
+anti_aliasing = true
+anti_aliasing_size = 1
+_sections_unfolded = [ "Border", "Border Width", "Content Margin", "Corner Radius", "Shadow" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
+
+[sub_resource type="Theme" id=3]
+
+default_font = SubResource( 2 )
+
+[node name="GraphicsGUI" type="Control"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+
+self_modulate = Color( 1, 1, 1, 0.501961 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 337.0
+margin_bottom = 433.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_styles/panel = SubResource( 1 )
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Mouse", "Size Flags", "Theme", "Visibility", "custom_styles" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.5
+margin_top = -200.5
+margin_right = 151.5
+margin_bottom = 200.5
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Anchor" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 296.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 3 )
+alignment = 0
+_sections_unfolded = [ "Theme", "custom_constants" ]
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 185.0
+margin_bottom = 29.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Shadow Atlas Size"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ShadowAtlasSize" type="OptionButton" parent="Panel/VBoxContainer/HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 189.0
+margin_right = 267.0
+margin_bottom = 32.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/hseparation = 0
+custom_constants/arrow_margin = 2
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "256"
+flat = false
+align = 0
+selected = 0
+items = [ "256", null, false, 0, null, "512", null, false, 1, null, "1024", null, false, 2, null, "2048", null, false, 3, null, "4096", null, false, 4, null, "8192", null, false, 5, null, "16384", null, false, 6, null ]
+_sections_unfolded = [ "custom_constants" ]
+
+[connection signal="item_selected" from="Panel/VBoxContainer/HBoxContainer/ShadowAtlasSize" to="." method="_on_ShadowAtlasSize_item_selected"]
+
+
