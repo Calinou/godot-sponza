@@ -20,6 +20,8 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
 if you do not have Git installed.
 
+**You need [Godot 3.0 beta 1](https://godotengine.org/article/dev-snapshot-godot-3-0-beta-1) (or newer) to run this demo.**
+
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
 Confirm importing, then edit the project (so that the resources are imported
