@@ -4,6 +4,10 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/spnza_bricks_a_diff.tga-1582a728c7f9039e950a39144da6ae46.s3tc.stex"
 
+[deps]
+
+source_md5="85be0257b1f610d665401eeb4c0f90ca"
+
 [params]
 
 compress/mode=2
@@ -13,7 +17,7 @@ compress/normal_map=2
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false

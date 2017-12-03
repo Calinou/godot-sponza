@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/background_ddn.tga-c1c40f27c90614baffe49d30f81641f5.s3tc.stex"
 
+[deps]
+
+source_md5="c60c8c7fb426247396fc5327c196c620"
+
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=1
+compress/normal_map=2
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

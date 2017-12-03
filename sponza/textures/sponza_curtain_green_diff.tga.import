@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/sponza_curtain_green_diff.tga-f1bc984d9ca3c037ecd83b635b7647a2.s3tc.stex"
 
+[deps]
+
+source_md5="286c9af09238be42034ea99f63fa8697"
+
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false

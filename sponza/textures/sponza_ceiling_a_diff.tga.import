@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/sponza_ceiling_a_diff.tga-ced6e652bc50285310d603938aa1ddda.s3tc.stex"
 
+[deps]
+
+source_md5="9bcebb6d9e0ce6cbc429235386a33023"
+
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false

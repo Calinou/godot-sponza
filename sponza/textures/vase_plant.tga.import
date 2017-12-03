@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/vase_plant.tga-dd3f6f77e7d6955a64cd8ecef62008bd.s3tc.stex"
 
+[deps]
+
+source_md5="a2538f8331aa678c56d4b9d4768055f4"
+
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=true
 flags/filter=true
 flags/mipmaps=true
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false

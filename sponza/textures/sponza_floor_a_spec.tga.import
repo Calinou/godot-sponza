@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/sponza_floor_a_spec.tga-c7217f983b47c8d5c5eca395b9f33f38.stex"
 
+[deps]
+
+source_md5="80fc4896a978d580ac41c02aa489dbfe"
+
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/vase_plant_mask.tga-ff0db8abfd397ed3eae24d4a5e2a6db2.stex"
 
+[deps]
+
+source_md5="9e7e6bea12a0f84d01e6b80f6d8b562f"
+
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/lion2_ddn.tga-94eb28f3e2629a225d67f03a46d11e9f.stex"
 
+[deps]
+
+source_md5="74950ddef2734c69492c20c7e277ea81"
+
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false

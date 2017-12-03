@@ -1,0 +1,12 @@
+[gd_resource type="DynamicFont" load_steps=2 format=2]
+
+[ext_resource path="res://fonts/noto_sans_semicondensed_regular.ttf" type="DynamicFontData" id=1]
+
+[resource]
+
+size = 18
+use_mipmaps = true
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Font/fallback", "Settings" ]
+

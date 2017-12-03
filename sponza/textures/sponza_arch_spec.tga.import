@@ -4,16 +4,20 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/sponza_arch_spec.tga-791bad75427500ae0fbd1f8155767334.stex"
 
+[deps]
+
+source_md5="d100a3547b338f0dfd081d7aedaf145a"
+
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=0
+compress/normal_map=2
 flags/repeat=0
 flags/filter=true
 flags/mipmaps=false
-flags/anisotropic=false
+flags/anisotropic=true
 flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
