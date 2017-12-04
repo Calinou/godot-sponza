@@ -183,6 +183,8 @@ func _on_display_resolution_change(id):
 		print(ResolutionDropdown.get_item_count())
 		OS.set_window_fullscreen(false)
 		OS.set_window_size(display_resolutions[id])
+		# May be maximized automatically if the previous window size was bigger than screen size
+		OS.set_window_maximized(false)
 	else:
 		# The last item of the OptionButton is always "Fullscreen"
 		OS.set_window_fullscreen(true)
