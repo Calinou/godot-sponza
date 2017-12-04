@@ -133,6 +133,10 @@ func _input(event):
 	if event.is_action_pressed("toggle_fullscreen"):
 		OS.set_window_fullscreen(!OS.is_window_fullscreen())
 
+	# Exit the project when pressing Ctrl+Q
+	if event.is_action_pressed("quit"):
+		get_tree().quit()
+
 # Returns a string containing BBCode text of the preset description
 func construct_bbcode(preset):
 	return """[table=2]
