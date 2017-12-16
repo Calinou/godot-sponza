@@ -379,6 +379,7 @@ shortcut = null
 group = null
 text = "OK"
 flat = false
+align = 1
 _sections_unfolded = [ "Rect" ]
 
 [node name="MenuTip" type="RichTextLabel" parent="Panel"]
