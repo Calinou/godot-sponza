@@ -86,7 +86,6 @@ anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -97,7 +96,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." index="0"]
 
 anchor_left = 0.5
 anchor_top = 0.5
@@ -108,7 +107,6 @@ margin_top = -325.0
 margin_right = 512.0
 margin_bottom = 325.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -118,7 +116,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="WelcomeTitle" type="Label" parent="Panel"]
+[node name="WelcomeTitle" type="Label" parent="Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -128,7 +126,6 @@ margin_top = 16.0
 margin_right = 1024.0
 margin_bottom = 74.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -140,7 +137,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_constants", "custom_fonts" ]
 
-[node name="WelcomeText" type="Label" parent="Panel"]
+[node name="WelcomeText" type="Label" parent="Panel" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -151,7 +148,6 @@ margin_top = 96.0
 margin_right = 676.0
 margin_bottom = 509.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -172,7 +168,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_constants", "custom_fonts" ]
 
-[node name="GraphicsQuality" type="HBoxContainer" parent="Panel"]
+[node name="GraphicsQuality" type="HBoxContainer" parent="Panel" index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -183,7 +179,6 @@ margin_top = 180.0
 margin_right = 419.0
 margin_bottom = 230.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -194,7 +189,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="Panel/GraphicsQuality"]
+[node name="Label" type="Label" parent="Panel/GraphicsQuality" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -204,7 +199,6 @@ margin_top = 6.0
 margin_right = 155.0
 margin_bottom = 44.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -215,7 +209,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="OptionButton" type="OptionButton" parent="Panel/GraphicsQuality"]
+[node name="OptionButton" type="OptionButton" parent="Panel/GraphicsQuality" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -225,7 +219,6 @@ margin_left = 179.0
 margin_right = 238.0
 margin_bottom = 50.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -239,7 +232,7 @@ align = 0
 selected = 0
 items = [ "Low", null, false, 0, null, "Medium", null, false, 1, null, "High", null, false, 2, null, "Ultra", null, false, 3, null ]
 
-[node name="GraphicsBlurb" type="RichTextLabel" parent="Panel"]
+[node name="GraphicsBlurb" type="RichTextLabel" parent="Panel" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -250,6 +243,7 @@ margin_top = 281.0
 margin_right = 480.0
 margin_bottom = 393.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -266,7 +260,7 @@ percent_visible = 1.0
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "custom_fonts" ]
 
-[node name="GraphicsInfo" type="RichTextLabel" parent="Panel"]
+[node name="GraphicsInfo" type="RichTextLabel" parent="Panel" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -277,6 +271,7 @@ margin_top = 185.0
 margin_right = 992.0
 margin_bottom = 441.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -293,7 +288,7 @@ percent_visible = 1.0
 override_selected_font_color = false
 _sections_unfolded = [ "BBCode", "Rect", "custom_constants", "custom_fonts", "custom_styles" ]
 
-[node name="DisplayResolution" type="HBoxContainer" parent="Panel"]
+[node name="DisplayResolution" type="HBoxContainer" parent="Panel" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -304,7 +299,6 @@ margin_top = 516.0
 margin_right = 410.0
 margin_bottom = 553.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -315,7 +309,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="Panel/DisplayResolution"]
+[node name="Label" type="Label" parent="Panel/DisplayResolution" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -324,7 +318,6 @@ anchor_bottom = 0.0
 margin_right = 170.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 2
 size_flags_horizontal = 1
 size_flags_vertical = 4
@@ -335,7 +328,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="OptionButton" type="OptionButton" parent="Panel/DisplayResolution"]
+[node name="OptionButton" type="OptionButton" parent="Panel/DisplayResolution" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -345,7 +338,6 @@ margin_left = 194.0
 margin_right = 218.0
 margin_bottom = 38.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -358,7 +350,7 @@ align = 0
 selected = -1
 items = [  ]
 
-[node name="ConfirmButton" type="Button" parent="Panel"]
+[node name="ConfirmButton" type="Button" parent="Panel" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -369,7 +361,6 @@ margin_top = 553.0
 margin_right = 608.0
 margin_bottom = 606.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -382,17 +373,40 @@ flat = false
 align = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="MenuTip" type="RichTextLabel" parent="Panel"]
+[node name="QuitButton" type="Button" parent="Panel" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 672.0
-margin_top = 601.0
-margin_right = 992.0
+margin_left = 901.0
+margin_top = 578.0
+margin_right = 974.0
+margin_bottom = 616.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Quit"
+flat = false
+align = 1
+
+[node name="MenuTip" type="RichTextLabel" parent="Panel" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 29.0
+margin_top = 593.0
+margin_right = 349.0
 margin_bottom = 649.0
 rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
@@ -400,7 +414,7 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
-bbcode_text = "[right][color=#DDFFFFFF]Press [color=#DDFFFF77][ESCAPE][/color] to toggle this menu.[/color][/right]"
+bbcode_text = "[color=#DDFFFFFF]Press [color=#DDFFFF77][ESCAPE][/color] to toggle this menu.[/color]"
 visible_characters = -1
 percent_visible = 1.0
 override_selected_font_color = false
@@ -411,5 +425,7 @@ _sections_unfolded = [ "BBCode", "custom_fonts", "custom_styles" ]
 [connection signal="item_selected" from="Panel/DisplayResolution/OptionButton" to="." method="_on_display_resolution_change"]
 
 [connection signal="pressed" from="Panel/ConfirmButton" to="." method="_on_ConfirmButton_pressed"]
+
+[connection signal="pressed" from="Panel/QuitButton" to="." method="_on_QuitButton_pressed"]
 
 

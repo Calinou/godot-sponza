@@ -1,5 +1,5 @@
-# Copyright © 2017 Hugo Locurcio and contributors - MIT license
-# See LICENSE.md included in the source distribution for more information.
+# Copyright © 2017 Hugo Locurcio and contributors - MIT License
+# See `LICENSE.md` included in the source distribution for details.
 
 extends Label
 

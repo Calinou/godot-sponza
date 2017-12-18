@@ -1,5 +1,5 @@
-# Copyright © 2017 Hugo Locurcio and contributors - MIT license
-# See LICENSE.md included in the source distribution for more information.
+# Copyright © 2017 Hugo Locurcio and contributors - MIT License
+# See `LICENSE.md` included in the source distribution for details.
 
 extends Camera
 
@@ -14,12 +14,12 @@ onready var velocity = Vector3()
 onready var initial_rotation = self.rotation.y
 
 func _input(event):
-	# Horizontal mouse look
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotation.y -= event.relative.x*MOUSE_SENSITIVITY
 
-	# Vertical mouse look, clamped to -90..90 degrees
+	# Mouse look (effective only if the mouse is captured)
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		# Horizontal mouse look
+		rotation.y -= event.relative.x*MOUSE_SENSITIVITY
+		# Vertical mouse look, clamped to -90..90 degrees
 		rotation.x = clamp(rotation.x - event.relative.y*MOUSE_SENSITIVITY, deg2rad(-90), deg2rad(90))
 
 	# Toggle HUD

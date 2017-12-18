@@ -1,5 +1,5 @@
-# Copyright © 2017 Hugo Locurcio and contributors - MIT license
-# See LICENSE.md included in the source distribution for more information.
+# Copyright © 2017 Hugo Locurcio and contributors - MIT License
+# See `LICENSE.md` included in the source distribution for details.
 
 extends Control
 
@@ -133,10 +133,6 @@ func _input(event):
 	if event.is_action_pressed("toggle_fullscreen"):
 		OS.set_window_fullscreen(!OS.is_window_fullscreen())
 
-	# Exit the project when pressing Ctrl+Q
-	if event.is_action_pressed("quit"):
-		get_tree().quit()
-
 # Returns a string containing BBCode text of the preset description
 func construct_bbcode(preset):
 	return """[table=2]
@@ -180,7 +176,6 @@ func _on_ConfirmButton_pressed():
 	visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-
 func _on_display_resolution_change(id):
 	if id < ResolutionDropdown.get_item_count() - 1:
 		print(id)
@@ -192,3 +187,6 @@ func _on_display_resolution_change(id):
 	else:
 		# The last item of the OptionButton is always "Fullscreen"
 		OS.set_window_fullscreen(true)
+
+func _on_QuitButton_pressed():
+	get_tree().quit()
