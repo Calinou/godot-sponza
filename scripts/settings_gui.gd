@@ -1,4 +1,4 @@
-# Copyright © 2017 Hugo Locurcio and contributors - MIT License
+# Copyright © 2017-2018 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
 extends Control

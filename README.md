@@ -20,7 +20,7 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
 if you do not have Git installed.
 
-**You need [Godot 3.0 beta 1](https://godotengine.org/article/dev-snapshot-godot-3-0-beta-1) (or newer) to run this demo.**
+**You need [Godot 3.0 RC 2](https://godotengine.org/article/dev-snapshot-godot-3-0-rc-2) (or newer) to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
@@ -34,14 +34,16 @@ the background, which would slow down the running project a lot.
 - <kbd>W/S/A/D</kbd>: Move forwards/backwards/left/right
 - <kbd>Space</kbd>: Move upwards
 - <kbd>Left Shift</kbd>: Move downwards
-- <kbd>Left Ctrl</kbd>: Speed modifier
+- <kbd>Right Mouse Button</kbd>: Speed modifier (effective when held)
+- <kbd>Mouse Wheel</kbd>: Change movement speed (always effective)
+- <kbd>Escape</kbd>: Toggle menu
 - <kbd>F1</kbd>: Toggle FPS display
 - <kbd>F10</kbd>: Toggle mouse capture
 - <kbd>F11</kbd> or <kbd>Alt + Enter</kbd>: Toggle fullscreen
 
 ## License
 
-Copyright © 2017 Hugo Locurcio and contributors
+Copyright © 2017-2018 Hugo Locurcio and contributors
 
 - Unless otherwise specified, files in this repository are licensed under the
 MIT license, see [LICENSE.md](LICENSE.md) for more information.
