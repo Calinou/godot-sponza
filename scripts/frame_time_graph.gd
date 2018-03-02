@@ -50,7 +50,7 @@ func _process(delta):
 
 	# Color the previous frame bar depending on the frame time
 	colors.set(frame_position, frame_color)
-	colors.set(frame_position + 1, Color(frame_color.r, frame_color.g, frame_color.b, 0.0))
+	colors.set(frame_position + 1, frame_color)
 
 	frame_position = wrapi(frames_drawn*2, 0, int(rect_size.x))
 	frame_color = gradient.interpolate(min(frame_time/50.0, 1.0))
@@ -63,12 +63,12 @@ func _process(delta):
 	)
 	points.set(
 		frame_position + 1,
-		Vector2(frame_position + 1, int(rect_size.y) - frame_time*9)
+		Vector2(frame_position + 1, int(rect_size.y) - frame_time*6)
 	)
 
 	# Color the current frame in white
 	colors.set(frame_position, Color(1.0, 1.0, 1.0, 1.0))
-	colors.set(frame_position + 1, Color(1.0, 1.0, 1.0, 0.0))
+	colors.set(frame_position + 1, Color(1.0, 1.0, 1.0, 1.0))
 
 	previous = OS.get_ticks_msec()
 
