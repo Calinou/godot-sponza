@@ -38,6 +38,7 @@ the background, which would slow down the running project a lot.
 - <kbd>Mouse Wheel</kbd>: Change movement speed (always effective)
 - <kbd>Escape</kbd>: Toggle menu
 - <kbd>F1</kbd>: Toggle FPS display
+- <kbd>F3</kbd>: Toggle frame time graph
 - <kbd>F10</kbd>: Toggle mouse capture
 - <kbd>F11</kbd> or <kbd>Alt + Enter</kbd>: Toggle fullscreen
 

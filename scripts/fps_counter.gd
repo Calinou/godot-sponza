@@ -1,7 +1,7 @@
 # Godot Sponza: Custom FPS counter implementation
 # Inspired by <http://www.growingwiththeweb.com/2017/12/fast-simple-js-fps-counter.html>
 #
-# Copyright © 2017 Hugo Locurcio and contributors - MIT License
+# Copyright © 2017-2018 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
 extends Label
