@@ -80,3 +80,9 @@ func _draw():
 func _input(event):
 	if event.is_action_pressed("toggle_frame_time_graph"):
 		visible = !visible
+
+func _on_resized():
+	# Resize the arrays when resizing the control to avoid setting
+	# nonexistent indices once the window has been resized
+	points.resize(rect_size.x)
+	colors.resize(rect_size.x)
