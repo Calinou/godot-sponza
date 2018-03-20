@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Changed
+
+- The frame time graph no longer blocks mouse input when visible.
+
 ## [1.0.0] - 2018-03-04
 
 - Initial versioned release.
