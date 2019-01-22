@@ -180,8 +180,6 @@ func _on_ConfirmButton_pressed():
 
 func _on_display_resolution_change(id):
 	if id < ResolutionDropdown.get_item_count() - 1:
-		print(id)
-		print(ResolutionDropdown.get_item_count())
 		OS.set_window_fullscreen(false)
 		OS.set_window_size(display_resolutions[id])
 		# May be maximized automatically if the previous window size was bigger than screen size
