@@ -427,5 +427,3 @@ _sections_unfolded = [ "BBCode", "custom_fonts", "custom_styles" ]
 [connection signal="pressed" from="Panel/ConfirmButton" to="." method="_on_ConfirmButton_pressed"]
 
 [connection signal="pressed" from="Panel/QuitButton" to="." method="_on_QuitButton_pressed"]
-
-

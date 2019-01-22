@@ -48,5 +48,3 @@ size_flags_vertical = 1
 custom_styles/panel = SubResource( 20 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Mouse", "Rect", "Visibility", "custom_styles" ]
-
-
