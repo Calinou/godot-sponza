@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- The welcome GUI and HUD elements now scale to match higher resolutions.
 - New project icon.
+
+### Changed
+
+- Upgraded project structure for Godot 3.1.
 
 ### Fixed
 

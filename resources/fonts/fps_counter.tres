@@ -1,11 +1,8 @@
 [gd_resource type="DynamicFont" load_steps=2 format=2]
 
-[ext_resource path="res://fonts/noto_sans_semicondensed_bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://fonts/noto_sans_semicondensed_bold.tres" type="DynamicFontData" id=1]
 
 [resource]
 
-size = 31
-use_mipmaps = false
-use_filter = false
+size = 20
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Font", "Settings" ]

@@ -1,0 +1,6 @@
+[gd_resource type="DynamicFontData" format=2]
+
+[resource]
+
+hinting = 0
+font_path = "res://fonts/noto_sans_semicondensed_bold.ttf"
