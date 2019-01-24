@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - The FPS counter now uses a better-looking outline provided by DynamicFont.
+- The frame time graph now features per-microsecond accuracy and can
+  display changes in a more granular fashion.
 - Upgraded project structure for Godot 3.1.
 
 ### Fixed

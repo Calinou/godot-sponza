@@ -20,7 +20,7 @@ var frame_position = 0
 # The color of the current frame
 var frame_color = Color(0.0, 1.0, 0.0)
 
-# The current frame's timestamp in milliseconds
+# The current frame's timestamp in microseconds
 var now = 0
 
 # The timestamp in milliseconds of the "previous" frame
@@ -45,7 +45,7 @@ func _ready():
 
 func _process(delta):
 	frames_drawn = Engine.get_frames_drawn()
-	now = OS.get_ticks_msec()
+	now = OS.get_ticks_usec()
 	frame_time = now - previous
 
 	# Color the previous frame bar depending on the frame time
@@ -53,9 +53,9 @@ func _process(delta):
 	colors.set(frame_position + 1, frame_color)
 
 	frame_position = wrapi(frames_drawn*2, 0, int(rect_size.x))
-	frame_color = gradient.interpolate(min(frame_time/50.0, 1.0))
+	frame_color = gradient.interpolate(min(frame_time/50000.0, 1.0))
 
-	# Every frame is represented as a bar that is ms × 5 pixels high
+	# Every frame is represented as a bar that is ms × 6 pixels high
 	# Every line is a pair of two points, so every frame has two points defined
 	points.set(
 		frame_position,
@@ -63,14 +63,14 @@ func _process(delta):
 	)
 	points.set(
 		frame_position + 1,
-		Vector2(frame_position + 1, int(rect_size.y) - frame_time*6)
+		Vector2(frame_position + 1, int(rect_size.y) - frame_time*0.006)
 	)
 
 	# Color the current frame in white
 	colors.set(frame_position, Color(1.0, 1.0, 1.0, 1.0))
 	colors.set(frame_position + 1, Color(1.0, 1.0, 1.0, 1.0))
 
-	previous = OS.get_ticks_msec()
+	previous = OS.get_ticks_usec()
 
 	update()
 
