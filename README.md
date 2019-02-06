@@ -12,7 +12,7 @@ based on the Sponza from Crytek.
 
 Clone the Git repository:
 
-```
+```bash
 git clone https://github.com/Calinou/godot-sponza.git
 ```
 
@@ -48,7 +48,7 @@ the background, which would slow down the running project a lot.
 Copyright © 2017-2019 Hugo Locurcio and contributors
 
 - Unless otherwise specified, files in this repository are licensed under the
-MIT license, see [LICENSE.md](LICENSE.md) for more information.
+  MIT license, see [LICENSE.md](LICENSE.md) for more information.
 - The [Noto Sans](https://www.google.com/get/noto/) fonts are licensed under
   the SIL OFL 1.1, see [fonts/LICENSE.txt](fonts/LICENSE.txt) for more information.
 - The [Crytek Sponza](http://www.crytek.com/cryengine/cryengine3/downloads/)
