@@ -20,7 +20,8 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
 if you do not have Git installed.
 
-**You need Godot 3.0 or newer to run this demo.**
+**You need [Godot 3.1 beta 3](https://godotengine.org/article/dev-snapshot-godot-3-1-beta-3)
+or newer to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
