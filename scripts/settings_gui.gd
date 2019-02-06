@@ -90,53 +90,45 @@ const presets = [
 	},
 ]
 
-# The root of the Sponza scene
-onready var root = $"/root/Scene Root"
+# The Sponza scene root
+onready var root := $"/root/Scene Root" as WorldEnvironment
 
 # The environment resource used for settings adjustments
-onready var environment = root.get_environment()
+onready var environment := root.get_environment()
 
-# Nodes used in the menu
-onready var GraphicsBlurb = $"Panel/GraphicsBlurb"
-onready var GraphicsInfo = $"Panel/GraphicsInfo"
-onready var ResolutionDropdown = $"Panel/DisplayResolution/OptionButton"
+onready var graphics_blurb := $"Panel/GraphicsBlurb" as RichTextLabel
+onready var graphics_info := $"Panel/GraphicsInfo" as RichTextLabel
+onready var resolution_dropdown := $"Panel/DisplayResolution/OptionButton" as OptionButton
 
-func _ready():
+func _ready() -> void:
 	# Initialize the project on the default preset
 	$"Panel/GraphicsQuality/OptionButton".select(default_preset)
 	_on_graphics_preset_change(default_preset)
 
 	# Cache screen size into a variable
-	var screen_size = OS.get_screen_size()
+	var screen_size := OS.get_screen_size()
 
 	# Add resolutions to the display resolution dropdown
 	for resolution in display_resolutions:
 		if resolution.x < screen_size.x and resolution.y < screen_size.y:
-			ResolutionDropdown.add_item(str(resolution.x) + "×" + str(resolution.y))
+			resolution_dropdown.add_item(str(resolution.x) + "×" + str(resolution.y))
 
-	# Add a "Fullscreen" item at the end
-	ResolutionDropdown.add_item("Fullscreen")
+	# Add a "Fullscreen" item at the end and select it by default
+	resolution_dropdown.add_item("Fullscreen")
+	resolution_dropdown.select(resolution_dropdown.get_item_count() - 1)
 
-	# Select the "Fullscreen" item, which is always at the end
-	ResolutionDropdown.select(ResolutionDropdown.get_item_count() - 1)
-
-func _input(event):
+func _input(event: InputEvent) -> void:
 	# Toggle the menu when pressing Escape
 	if event.is_action_pressed("toggle_menu"):
 		visible = !visible
-		if visible:
-			# The menu is now visible, release the mouse
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
-			# The menu is no longer visible, capture the mouse again
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if visible else Input.MOUSE_MODE_CAPTURED)
 
-	# Toggle fullscreen when pressing F11 or Alt+Enter
+	# Toggle fullscreen when pressing F11 or Alt + Enter
 	if event.is_action_pressed("toggle_fullscreen"):
-		OS.set_window_fullscreen(!OS.is_window_fullscreen())
+		OS.window_fullscreen = !OS.window_fullscreen
 
-# Returns a string containing BBCode text of the preset description
-func construct_bbcode(preset):
+# Returns a string containing BBCode text of the preset description.
+func construct_bbcode(preset: int) -> String:
 	return """[table=2]
 [cell][b]Anti-aliasing[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/filters/msaa"][1]) + """[/cell]
 [cell][b]Anisotropic filtering[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/anisotropic_filter_level"][1]) + """[/cell]
@@ -146,17 +138,15 @@ func construct_bbcode(preset):
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]
 [/table]"""
 
-func _on_graphics_preset_change(preset):
-	# Update preset blurb
-	GraphicsBlurb.bbcode_text = preset_descriptions[preset]
-
-	# Update the preset summary table
-	GraphicsInfo.bbcode_text = construct_bbcode(preset)
+func _on_graphics_preset_change(preset: int) -> void:
+	graphics_blurb.bbcode_text = preset_descriptions[preset]
+	graphics_info.bbcode_text = construct_bbcode(preset)
 
 	# Apply settings from the preset
 	for setting in presets[preset]:
 		var value = presets[preset][setting][0]
 		ProjectSettings.set_setting(setting, value)
+
 		match setting:
 			# Environment settings
 			"environment/glow_enabled":
@@ -174,12 +164,12 @@ func _on_graphics_preset_change(preset):
 			"rendering/quality/filters/msaa":
 				get_viewport().msaa = value
 
-func _on_ConfirmButton_pressed():
+func _on_ConfirmButton_pressed() -> void:
 	visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-func _on_display_resolution_change(id):
-	if id < ResolutionDropdown.get_item_count() - 1:
+func _on_display_resolution_change(id: int) -> void:
+	if id < resolution_dropdown.get_item_count() - 1:
 		OS.set_window_fullscreen(false)
 		OS.set_window_size(display_resolutions[id])
 		# May be maximized automatically if the previous window size was bigger than screen size
@@ -188,5 +178,5 @@ func _on_display_resolution_change(id):
 		# The last item of the OptionButton is always "Fullscreen"
 		OS.set_window_fullscreen(true)
 
-func _on_QuitButton_pressed():
+func _on_QuitButton_pressed() -> void:
 	get_tree().quit()

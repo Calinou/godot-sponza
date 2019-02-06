@@ -7,35 +7,35 @@ extends Camera
 
 const MOUSE_SENSITIVITY = 0.002
 
-onready var SettingsGUI = $"../SettingsGUI"
-onready var FPSCounter = $"../FPSCounter"
+onready var settings_gui := $"../SettingsGUI" as Control
+onready var fps_counter := $"../FPSCounter" as Label
 
 # The camera movement speed (tweakable using the mouse wheel)
-var move_speed = 0.5
+var move_speed := 0.5
 
 # Stores where the camera is wanting to go (based on pressed keys and speed modifier)
-var motion = Vector3()
+var motion := Vector3()
 
 # Stores the effective camera velocity
-var velocity = Vector3()
+var velocity := Vector3()
 
 # The initial camera node rotation
-var initial_rotation = self.rotation.y
+var initial_rotation := rotation.y
 
-func _input(event):
+func _input(event: InputEvent) -> void:
 	# Mouse look (effective only if the mouse is captured)
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		# Horizontal mouse look
-		rotation.y -= event.relative.x*MOUSE_SENSITIVITY
+		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
 		# Vertical mouse look, clamped to -90..90 degrees
-		rotation.x = clamp(rotation.x - event.relative.y*MOUSE_SENSITIVITY, deg2rad(-90), deg2rad(90))
+		rotation.x = clamp(rotation.x - event.relative.y * MOUSE_SENSITIVITY, deg2rad(-90), deg2rad(90))
 
 	# Toggle HUD
 	if event.is_action_pressed("toggle_hud"):
-		FPSCounter.visible = !FPSCounter.visible
+		fps_counter.visible = !fps_counter.visible
 
 	# These actions do not make sense when the settings GUI is visible, hence the check
-	if not SettingsGUI.visible:
+	if not settings_gui.visible:
 		# Toggle mouse capture (only while the menu is not visible)
 		if event.is_action_pressed("toggle_mouse_capture"):
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -51,10 +51,7 @@ func _input(event):
 		if event.is_action_pressed("movement_speed_decrease"):
 			move_speed = max(0.1, move_speed - 0.1)
 
-func _process(delta):
-
-	# Movement
-
+func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
 		motion.x = -1
 	elif Input.is_action_pressed("move_backward"):
@@ -87,18 +84,18 @@ func _process(delta):
 	# Rotate the motion based on the camera angle
 	motion = motion \
 		.rotated(Vector3(0, 1, 0), rotation.y - initial_rotation) \
-		.rotated(Vector3(1, 0, 0), cos(rotation.y)*rotation.x) \
-		.rotated(Vector3(0, 0, 1), -sin(rotation.y)*rotation.x)
+		.rotated(Vector3(1, 0, 0), cos(rotation.y) * rotation.x) \
+		.rotated(Vector3(0, 0, 1), -sin(rotation.y) * rotation.x)
 
 	# Add motion
-	velocity += motion*move_speed
+	velocity += motion * move_speed
 
 	# Friction
 	velocity *= 0.9
 
 	# Apply velocity
-	translation += velocity*delta
+	translation += velocity * delta
 
-func _exit_tree():
+func _exit_tree() -> void:
 	# Restore the mouse cursor upon quitting
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
