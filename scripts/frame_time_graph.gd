@@ -29,15 +29,12 @@ var previous := 0
 # Time between the current and previous frame in milliseconds
 var frame_time := 0
 
+onready var preloader := $ResourcePreloader as ResourcePreloader
+
 # The color gradient used for coloring the frame time bars
-var gradient := Gradient.new()
+onready var gradient := preloader.get_resource("frame_time_graph_colors") as Gradient
 
 func _ready() -> void:
-	# Green-yellow-red gradient
-	gradient.set_color(0, Color(0.0, 1.0, 0.0))
-	gradient.add_point(0.5, Color(1.0, 1.0, 0.0))
-	gradient.set_color(1, Color(1.0, 0.0, 0.0))
-
 	# Pre-allocate the `points` and `colors` arrays
 	# This makes it possible to use `PoolVector2Array.set()` directly on them
 	points.resize(int(rect_size.x))
@@ -54,7 +51,7 @@ func _process(delta: float) -> void:
 	colors.set(frame_position + 1, frame_color)
 
 	frame_position = wrapi(frames_drawn * 2, 0, int(rect_size.x))
-	frame_color = gradient.interpolate(min(frame_time/50000.0, 1.0))
+	frame_color = gradient.interpolate(min(frame_time / 50000.0, 1.0))
 
 	# Every frame is represented as a bar that is ms × 6 pixels high
 	# Every line is a pair of two points, so every frame has two points defined
