@@ -40,8 +40,7 @@ func _ready() -> void:
 	points.resize(int(rect_size.x))
 	colors.resize(int(rect_size.x))
 
-#warning-ignore:unused_argument
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	frames_drawn = Engine.get_frames_drawn()
 	now = OS.get_ticks_usec()
 	frame_time = now - previous
