@@ -3,16 +3,21 @@
 importer="texture"
 type="StreamTexture"
 path="res://.import/sponza_details_spec.tga-74177a86fa2bc4423e3d3ef362b889c8.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_md5="2daee6f1e1194feb1092868691c03ced"
+source_file="res://sponza/textures/sponza_details_spec.tga"
+dest_files=[ "res://.import/sponza_details_spec.tga-74177a86fa2bc4423e3d3ef362b889c8.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=2
 flags/repeat=0
 flags/filter=true
@@ -22,6 +27,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -3,16 +3,22 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/lion_ddn.tga-c935dba368adfccf52e4721fc2378deb.s3tc.stex"
+metadata={
+"imported_formats": [ "s3tc" ],
+"vram_texture": true
+}
 
 [deps]
 
-source_md5="cc39f747699e9b5d4c349414fb04e2b7"
+source_file="res://sponza/textures/lion_ddn.tga"
+dest_files=[ "res://.import/lion_ddn.tga-c935dba368adfccf52e4721fc2378deb.s3tc.stex" ]
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=2
 flags/repeat=true
 flags/filter=true
@@ -22,6 +28,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false

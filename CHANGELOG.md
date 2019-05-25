@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- Materials now use the Burley lighting model instead of Lambert.
+- Materials are now more rough and less metallic.
 - The FPS counter now uses a better-looking outline provided by DynamicFont.
 - The frame time graph now features per-microsecond accuracy and can
   display changes in a more granular fashion.
@@ -21,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Transparent materials are now displayed correctly.
 - The frame time graph no longer blocks mouse input when visible.
 
 ## 1.0.0 - 2018-03-04

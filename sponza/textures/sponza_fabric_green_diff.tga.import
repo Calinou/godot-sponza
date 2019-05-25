@@ -3,16 +3,22 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/sponza_fabric_green_diff.tga-e336f41ee4c39e95fd2f1407fbd3d452.s3tc.stex"
+metadata={
+"imported_formats": [ "s3tc" ],
+"vram_texture": true
+}
 
 [deps]
 
-source_md5="99c3432d1afde06d7924687e058b18ab"
+source_file="res://sponza/textures/sponza_fabric_green_diff.tga"
+dest_files=[ "res://.import/sponza_fabric_green_diff.tga-e336f41ee4c39e95fd2f1407fbd3d452.s3tc.stex" ]
 
 [params]
 
 compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=2
 flags/repeat=true
 flags/filter=true
@@ -22,6 +28,7 @@ flags/srgb=1
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=false
