@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Materials now use the Burley lighting model instead of Lambert.
 - Materials are now more rough and less metallic.
+- Increased the OmniLights' shadow bias to make shadow acne less visible.
 - The FPS counter now uses a better-looking outline provided by DynamicFont.
 - The frame time graph now features per-microsecond accuracy and can
   display changes in a more granular fashion.
