@@ -22,6 +22,7 @@ var velocity := Vector3()
 # The initial camera node rotation
 var initial_rotation := rotation.y
 
+
 func _input(event: InputEvent) -> void:
 	# Mouse look (effective only if the mouse is captured)
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -43,13 +44,12 @@ func _input(event: InputEvent) -> void:
 			else:
 				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-		# Movement speed change
-
 		if event.is_action_pressed("movement_speed_increase"):
 			move_speed = min(1.5, move_speed + 0.1)
 
 		if event.is_action_pressed("movement_speed_decrease"):
 			move_speed = max(0.1, move_speed - 0.1)
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_forward"):
@@ -87,14 +87,11 @@ func _process(delta: float) -> void:
 		.rotated(Vector3(1, 0, 0), cos(rotation.y) * rotation.x) \
 		.rotated(Vector3(0, 0, 1), -sin(rotation.y) * rotation.x)
 
-	# Add motion
+	# Add motion, apply friction and velocity
 	velocity += motion * move_speed
-
-	# Friction
 	velocity *= 0.9
-
-	# Apply velocity
 	translation += velocity * delta
+
 
 func _exit_tree() -> void:
 	# Restore the mouse cursor upon quitting

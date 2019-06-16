@@ -100,6 +100,7 @@ onready var graphics_blurb := $"Panel/GraphicsBlurb" as RichTextLabel
 onready var graphics_info := $"Panel/GraphicsInfo" as RichTextLabel
 onready var resolution_dropdown := $"Panel/DisplayResolution/OptionButton" as OptionButton
 
+
 func _ready() -> void:
 	# Initialize the project on the default preset
 	$"Panel/GraphicsQuality/OptionButton".select(default_preset)
@@ -117,6 +118,7 @@ func _ready() -> void:
 	resolution_dropdown.add_item("Fullscreen")
 	resolution_dropdown.select(resolution_dropdown.get_item_count() - 1)
 
+
 func _input(event: InputEvent) -> void:
 	# Toggle the menu when pressing Escape
 	if event.is_action_pressed("toggle_menu"):
@@ -126,6 +128,7 @@ func _input(event: InputEvent) -> void:
 	# Toggle fullscreen when pressing F11 or Alt + Enter
 	if event.is_action_pressed("toggle_fullscreen"):
 		OS.window_fullscreen = !OS.window_fullscreen
+
 
 # Returns a string containing BBCode text of the preset description.
 func construct_bbcode(preset: int) -> String:
@@ -137,6 +140,7 @@ func construct_bbcode(preset: int) -> String:
 [cell][b]Bloom[/b][/cell] [cell]""" + str(presets[preset]["environment/glow_enabled"][1]) + """[/cell]
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]
 [/table]"""
+
 
 func _on_graphics_preset_change(preset: int) -> void:
 	graphics_blurb.bbcode_text = preset_descriptions[preset]
@@ -164,9 +168,11 @@ func _on_graphics_preset_change(preset: int) -> void:
 			"rendering/quality/filters/msaa":
 				get_viewport().msaa = value
 
+
 func _on_ConfirmButton_pressed() -> void:
 	visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 
 func _on_display_resolution_change(id: int) -> void:
 	if id < resolution_dropdown.get_item_count() - 1:
@@ -177,6 +183,7 @@ func _on_display_resolution_change(id: int) -> void:
 	else:
 		# The last item of the OptionButton is always "Fullscreen"
 		OS.set_window_fullscreen(true)
+
 
 func _on_QuitButton_pressed() -> void:
 	get_tree().quit()

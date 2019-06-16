@@ -12,6 +12,7 @@ var times := []
 # Frames per second
 var fps := 0
 
+
 func _process(_delta: float) -> void:
 	var now := OS.get_ticks_msec()
 

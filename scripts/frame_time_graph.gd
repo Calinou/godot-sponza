@@ -34,11 +34,13 @@ onready var preloader := $ResourcePreloader as ResourcePreloader
 # The color gradient used for coloring the frame time bars
 onready var gradient := preloader.get_resource("frame_time_graph_colors") as Gradient
 
+
 func _ready() -> void:
 	# Pre-allocate the `points` and `colors` arrays
 	# This makes it possible to use `PoolVector2Array.set()` directly on them
 	points.resize(int(rect_size.x))
 	colors.resize(int(rect_size.x))
+
 
 func _process(_delta: float) -> void:
 	frames_drawn = Engine.get_frames_drawn()
@@ -71,12 +73,15 @@ func _process(_delta: float) -> void:
 
 	update()
 
+
 func _draw() -> void:
 	draw_multiline_colors(points, colors, 1.0, true)
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_frame_time_graph"):
 		visible = !visible
+
 
 func _on_resized() -> void:
 	# Resize the arrays when resizing the control to avoid setting
