@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 
+- Updated particle materials for Godot 3.2.
 - Transparent materials are now displayed correctly.
 - The frame time graph no longer blocks mouse input when visible.
 

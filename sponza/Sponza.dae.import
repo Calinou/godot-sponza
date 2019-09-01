@@ -6,12 +6,14 @@ path="res://.import/Sponza.dae-a161e2224a3a973c5f9f90d5ce6bb52a.scn"
 
 [deps]
 
-source_md5="ba3c8db4bb1851d6e1e3772eafb174c4"
+source_file="res://sponza/Sponza.dae"
+dest_files=[ "res://.import/Sponza.dae-a161e2224a3a973c5f9f90d5ce6bb52a.scn" ]
 
 [params]
 
 nodes/root_type="Spatial"
 nodes/root_name="Scene Root"
+nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
