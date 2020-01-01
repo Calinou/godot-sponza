@@ -1,6 +1,6 @@
 # Godot Sponza: Frame time graph display control
 #
-# Copyright © 2017-2019 Hugo Locurcio and contributors - MIT License
+# Copyright © 2017-2020 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
 extends Panel

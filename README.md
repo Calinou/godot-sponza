@@ -45,7 +45,7 @@ the background, which would slow down the running project a lot.
 
 ## License
 
-Copyright © 2017-2019 Hugo Locurcio and contributors
+Copyright © 2017-2020 Hugo Locurcio and contributors
 
 - Unless otherwise specified, files in this repository are licensed under the
   MIT license, see [LICENSE.md](LICENSE.md) for more information.
