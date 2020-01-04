@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- The scene now uses filmic tonemapping instead of linear tonemapping.
 - Materials now use the Burley lighting model instead of Lambert.
 - Materials are now more rough and less metallic.
 - Increased the OmniLights' shadow bias to make shadow acne less visible.
