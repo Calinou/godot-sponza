@@ -1,0 +1,24 @@
+[remap]
+
+importer="texture_array"
+type="TextureArray"
+path="res://.import/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.texarr"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://scenes/sponza.exr"
+dest_files=[ "res://.import/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.texarr" ]
+
+[params]
+
+compress/mode=0
+compress/no_bptc_if_rgb=false
+flags/repeat=false
+flags/filter=true
+flags/mipmaps=false
+flags/srgb=false
+slices/horizontal=1
+slices/vertical=1

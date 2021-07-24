@@ -1,6 +1,6 @@
-# Sponza demo for Godot 3
+# Sponza demo for Godot 3.x
 
-A nice-looking 3D demo and benchmark for Godot 3,
+A nice-looking 3D demo and benchmark for Godot 3.x,
 based on the Sponza from Crytek.
 
 ![Godot 3 Sponza image 1](https://archive.hugo.pro/.public/godot-sponza/godot_3_sponza_1.jpg)
@@ -20,7 +20,7 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
 if you do not have Git installed.
 
-**You need [Godot 3.1 beta 3](https://godotengine.org/article/dev-snapshot-godot-3-1-beta-3)
+**You need [Godot 3.3.2](https://godotengine.org/article/maintenance-release-godot-3-3-2)
 or newer to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
@@ -45,7 +45,7 @@ the background, which would slow down the running project a lot.
 
 ## License
 
-Copyright © 2017-2020 Hugo Locurcio and contributors
+Copyright © 2017-2021 Hugo Locurcio and contributors
 
 - Unless otherwise specified, files in this repository are licensed under the
   MIT license, see [LICENSE.md](LICENSE.md) for more information.

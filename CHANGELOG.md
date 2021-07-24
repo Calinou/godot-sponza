@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
+- A fully baked BakedLightmap is now used instead of GIProbe to improve performance
+  and quality (no more light leaking).
 - The scene now uses filmic tonemapping instead of linear tonemapping.
 - Materials now use the Burley lighting model instead of Lambert.
 - Materials are now more rough and less metallic.
@@ -21,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - The FPS counter now uses a better-looking outline provided by DynamicFont.
 - The frame time graph now features per-microsecond accuracy and can
   display changes in a more granular fashion.
-- Upgraded project structure for Godot 3.1.
+- Upgraded project structure for Godot 3.3.
 
 ### Fixed
 

@@ -1,6 +1,6 @@
 # Godot Sponza: Settings GUI for tweaking graphics options
 #
-# Copyright © 2017-2020 Hugo Locurcio and contributors - MIT License
+# Copyright © 2017-2021 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
 extends Control
@@ -50,7 +50,6 @@ const presets = [
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
 		"rendering/quality/anisotropic_filter_level": [4, "4×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_DISABLED, "Disabled"],
-		"rendering/quality/voxel_cone_tracing/high_quality": [false, "Low-quality"],
 	},
 
 	# Medium
@@ -62,7 +61,6 @@ const presets = [
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
 		"rendering/quality/anisotropic_filter_level": [8, "8×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_2X, "2×"],
-		"rendering/quality/voxel_cone_tracing/high_quality": [false, "Low-quality"],
 	},
 
 	# High
@@ -74,7 +72,6 @@ const presets = [
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
 		"rendering/quality/anisotropic_filter_level": [16, "16×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_4X, "4×"],
-		"rendering/quality/voxel_cone_tracing/high_quality": [false, "Low-quality"],
 	},
 
 	# Ultra
@@ -86,7 +83,6 @@ const presets = [
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_MEDIUM, ""],
 		"rendering/quality/anisotropic_filter_level": [16, "16×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_8X, "8×"],
-		"rendering/quality/voxel_cone_tracing/high_quality": [true, "High-quality"],
 	},
 ]
 
@@ -133,9 +129,8 @@ func _input(event: InputEvent) -> void:
 # Returns a string containing BBCode text of the preset description.
 func construct_bbcode(preset: int) -> String:
 	return """[table=2]
-[cell][b]Anti-aliasing[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/filters/msaa"][1]) + """[/cell]
+[cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/filters/msaa"][1]) + """[/cell]
 [cell][b]Anisotropic filtering[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/anisotropic_filter_level"][1]) + """[/cell]
-[cell][b]Global illumination[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/voxel_cone_tracing/high_quality"][1]) + """[/cell]
 [cell][b]Ambient occlusion[/b][/cell] [cell]""" + str(presets[preset]["environment/ssao_enabled"][1]) + """[/cell]
 [cell][b]Bloom[/b][/cell] [cell]""" + str(presets[preset]["environment/glow_enabled"][1]) + """[/cell]
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]
