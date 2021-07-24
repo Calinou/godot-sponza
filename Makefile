@@ -9,7 +9,7 @@ all: dist-linux dist-macos dist-windows
 PHONY: all
 
 name = godot-sponza
-version = 1.0.0
+version = 2.0.0
 
 # Export and package for Linux
 dist-linux:

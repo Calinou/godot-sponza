@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-07-25
+
 ### Added
 
 - The welcome GUI and HUD elements now scale to match higher resolutions.
@@ -41,4 +43,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Initial versioned release.
 
-[Unreleased]: https://github.com/Calinou/godot-sponza/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Calinou/godot-sponza/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/Calinou/godot-sponza/compare/v1.0.0...v2.0.0
