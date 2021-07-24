@@ -48,7 +48,6 @@ const presets = [
 		"environment/ssao_enabled": [false, "Disabled"],
 		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/anisotropic_filter_level": [4, "4×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_DISABLED, "Disabled"],
 	},
 
@@ -59,7 +58,6 @@ const presets = [
 		"environment/ssao_enabled": [false, "Disabled"],
 		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/anisotropic_filter_level": [8, "8×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_2X, "2×"],
 	},
 
@@ -70,7 +68,6 @@ const presets = [
 		"environment/ssao_enabled": [true, "Medium-quality"],
 		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/anisotropic_filter_level": [16, "16×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_4X, "4×"],
 	},
 
@@ -81,7 +78,6 @@ const presets = [
 		"environment/ssao_enabled": [true, "High-quality"],
 		"environment/ssao_blur": [Environment.SSAO_BLUR_2x2, ""],
 		"environment/ssao_quality": [Environment.SSAO_QUALITY_MEDIUM, ""],
-		"rendering/quality/anisotropic_filter_level": [16, "16×"],
 		"rendering/quality/filters/msaa": [Viewport.MSAA_8X, "8×"],
 	},
 ]
@@ -130,7 +126,6 @@ func _input(event: InputEvent) -> void:
 func construct_bbcode(preset: int) -> String:
 	return """[table=2]
 [cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/filters/msaa"][1]) + """[/cell]
-[cell][b]Anisotropic filtering[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/anisotropic_filter_level"][1]) + """[/cell]
 [cell][b]Ambient occlusion[/b][/cell] [cell]""" + str(presets[preset]["environment/ssao_enabled"][1]) + """[/cell]
 [cell][b]Bloom[/b][/cell] [cell]""" + str(presets[preset]["environment/glow_enabled"][1]) + """[/cell]
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]

@@ -25,6 +25,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   display changes in a more granular fashion.
 - Upgraded project structure for Godot 3.3.
 
+### Removed
+
+- Removed setting for non-working anisotropic filtering setting.
+  Instead, anisotropic filtering is now always set to 8× on desktop platforms and
+  2× on mobile platforms.
+
 ### Fixed
 
 - Updated particle materials for Godot 3.2.
