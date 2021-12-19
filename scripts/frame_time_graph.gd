@@ -6,10 +6,10 @@
 extends Panel
 
 # Stores positions for drawing the frame time graph
-var points := PoolVector2Array()
+var points := PackedVector2Array()
 
 # Stores dynamically-adjusted colors for drawing the frame time graph
-var colors := PoolColorArray()
+var colors := PackedColorArray()
 
 # The number of frames drawn since the application started
 var frames_drawn := 0
@@ -29,22 +29,25 @@ var previous := 0
 # Time between the current and previous frame in milliseconds
 var frame_time := 0
 
-onready var preloader := $ResourcePreloader as ResourcePreloader
+@onready var preloader := $ResourcePreloader as ResourcePreloader
 
 # The color gradient used for coloring the frame time bars
-onready var gradient := preloader.get_resource("frame_time_graph_colors") as Gradient
+@onready var gradient := preloader.get_resource("frame_time_graph_colors") as Gradient
 
 
 func _ready() -> void:
-	# Pre-allocate the `points` and `colors` arrays
-	# This makes it possible to use `PoolVector2Array.set()` directly on them
+	# Temporarily disable frametime graph until we can figure out bugs.
+	set_process(false)
+	
+	# Pre-allocate the `points` and `colors` arrays.
+	# This makes it possible to use `PackedVector2Array.set()` directly on them.
 	points.resize(int(rect_size.x))
 	colors.resize(int(rect_size.x))
 
 
 func _process(_delta: float) -> void:
 	frames_drawn = Engine.get_frames_drawn()
-	now = OS.get_ticks_usec()
+	now = Time.get_ticks_usec()
 	frame_time = now - previous
 
 	# Color the previous frame bar depending on the frame time
@@ -69,13 +72,13 @@ func _process(_delta: float) -> void:
 	colors.set(frame_position, Color(1.0, 1.0, 1.0, 1.0))
 	colors.set(frame_position + 1, Color(1.0, 1.0, 1.0, 1.0))
 
-	previous = OS.get_ticks_usec()
+	previous = Time.get_ticks_usec()
 
 	update()
 
 
 func _draw() -> void:
-	draw_multiline_colors(points, colors, 1.0, true)
+	draw_multiline_colors(points, colors, 1.0)
 
 
 func _input(event: InputEvent) -> void:

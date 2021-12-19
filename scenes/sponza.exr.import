@@ -1,8 +1,9 @@
 [remap]
 
-importer="texture_array"
-type="TextureArray"
-path="res://.import/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.texarr"
+importer="2d_array_texture"
+type="StreamTexture2DArray"
+uid="uid://d38auf8p0c5jh"
+path="res://.godot/imported/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.stexarray"
 metadata={
 "vram_texture": false
 }
@@ -10,15 +11,16 @@ metadata={
 [deps]
 
 source_file="res://scenes/sponza.exr"
-dest_files=[ "res://.import/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.texarr" ]
+dest_files=["res://.godot/imported/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.stexarray"]
 
 [params]
 
 compress/mode=0
-compress/no_bptc_if_rgb=false
-flags/repeat=false
-flags/filter=true
-flags/mipmaps=false
-flags/srgb=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
 slices/horizontal=1
 slices/vertical=1

@@ -1,75 +1,60 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=3 uid="uid://dfjh4s01g77bl"]
 
-[ext_resource path="res://resources/themes/default.tres" type="Theme" id=1]
-[ext_resource path="res://scripts/settings_gui.gd" type="Script" id=2]
-[ext_resource path="res://resources/fonts/title.tres" type="DynamicFont" id=3]
-[ext_resource path="res://resources/fonts/text_strong.tres" type="DynamicFont" id=4]
-[ext_resource path="res://resources/fonts/text.tres" type="DynamicFont" id=5]
-[ext_resource path="res://resources/fonts/text_small.tres" type="DynamicFont" id=6]
+[ext_resource type="Script" path="res://scripts/settings_gui.gd" id="2"]
+[ext_resource type="Font" path="res://resources/fonts/title.tres" id="3"]
+[ext_resource type="Font" path="res://resources/fonts/text_strong.tres" id="4"]
+[ext_resource type="Font" path="res://resources/fonts/text.tres" id="5"]
+[ext_resource type="Font" path="res://resources/fonts/text_small.tres" id="6"]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0627451, 0.0627451, 0.0627451, 0.501961 )
+[sub_resource type="StyleBoxFlat" id="1"]
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 0.501961)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color( 0.0627451, 0.0627451, 0.0627451, 0.627451 )
+border_color = Color(0.0627451, 0.0627451, 0.0627451, 0.627451)
 corner_detail = 1
-shadow_color = Color( 0, 0, 0, 0 )
+shadow_color = Color(0, 0, 0, 0)
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id="2"]
 content_margin_left = 16.0
 content_margin_right = 16.0
 content_margin_top = 16.0
 content_margin_bottom = 16.0
-bg_color = Color( 0.0627451, 0.0627451, 0.0627451, 0.313726 )
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 0.313726)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color( 0.0627451, 0.0627451, 0.0627451, 0.54902 )
+border_color = Color(0.0627451, 0.0627451, 0.0627451, 0.54902)
 corner_detail = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id="3"]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id="4"]
 
 [node name="SettingsGUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource( 1 )
-script = ExtResource( 2 )
+script = ExtResource( "2" )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -488.0
-margin_top = -264.0
-margin_right = 488.0
-margin_bottom = 264.0
-custom_styles/panel = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource( "1" )
 
 [node name="WelcomeTitle" type="Label" parent="Panel"]
-margin_top = 16.0
-margin_right = 1024.0
-margin_bottom = 74.0
-custom_fonts/font = ExtResource( 3 )
+theme_override_fonts/font = ExtResource( "3" )
+theme_override_font_sizes/font_size = 16
 text = "Welcome"
-align = 1
 
 [node name="WelcomeText" type="Label" parent="Panel"]
-margin_left = 32.0
-margin_top = 88.0
-margin_right = 676.0
-margin_bottom = 509.0
-text = "This Sponza demo showcases the capabilities of the Godot 3 renderer.
+text = "This Sponza demo showcases the capabilities of the Godot 4 renderer.
 Please choose a preset suited to your hardware below:
 
 
@@ -83,105 +68,90 @@ Please choose a preset suited to your hardware below:
 For more reproducible benchmarks, choose a display resolution:"
 
 [node name="GraphicsQuality" type="HBoxContainer" parent="Panel"]
-margin_left = 80.0
-margin_top = 160.0
-margin_right = 419.0
-margin_bottom = 191.0
-custom_constants/separation = 24
+theme_override_constants/separation = 24
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Panel/GraphicsQuality"]
-margin_right = 128.0
-margin_bottom = 31.0
-custom_fonts/font = ExtResource( 4 )
+offset_top = 5.0
+offset_right = 128.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource( "4" )
 text = "Graphics quality"
 
 [node name="OptionButton" type="OptionButton" parent="Panel/GraphicsQuality"]
-margin_left = 152.0
-margin_right = 205.734
-margin_bottom = 31.0
+offset_left = 152.0
+offset_right = 213.0
+offset_bottom = 29.0
 text = "Low"
-items = [ "Low", null, false, 0, null, "Medium", null, false, 1, null, "High", null, false, 2, null, "Ultra", null, false, 3, null ]
+items = ["Low", null, false, 0, null, "Medium", null, false, 1, null, "High", null, false, 2, null, "Ultra", null, false, 3, null]
 selected = 0
 
 [node name="GraphicsBlurb" type="RichTextLabel" parent="Panel"]
-margin_left = 32.0
-margin_top = 231.0
-margin_right = 480.0
-margin_bottom = 338.0
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/bold_font = ExtResource( 4 )
-custom_fonts/normal_font = ExtResource( 5 )
-custom_constants/table_hseparation = 16
-custom_constants/line_separation = 2
+theme_override_constants/table_hseparation = 16
+theme_override_constants/line_separation = 2
+theme_override_fonts/bold_font = ExtResource( "4" )
+theme_override_fonts/normal_font = ExtResource( "5" )
+theme_override_styles/focus = SubResource( "2" )
+theme_override_styles/normal = SubResource( "2" )
 bbcode_enabled = true
 
 [node name="GraphicsInfo" type="RichTextLabel" parent="Panel"]
-margin_left = 512.0
-margin_top = 185.0
-margin_right = 952.0
-margin_bottom = 384.0
-custom_styles/focus = SubResource( 2 )
-custom_styles/normal = SubResource( 2 )
-custom_fonts/bold_font = ExtResource( 4 )
-custom_fonts/normal_font = ExtResource( 5 )
-custom_constants/table_hseparation = 16
-custom_constants/line_separation = 2
+theme_override_constants/table_hseparation = 16
+theme_override_constants/line_separation = 2
+theme_override_fonts/bold_font = ExtResource( "4" )
+theme_override_fonts/normal_font = ExtResource( "5" )
+theme_override_styles/focus = SubResource( "2" )
+theme_override_styles/normal = SubResource( "2" )
 bbcode_enabled = true
 
 [node name="DisplayResolution" type="HBoxContainer" parent="Panel"]
-margin_left = 80.0
-margin_top = 418.0
-margin_right = 410.0
-margin_bottom = 449.0
-custom_constants/separation = 24
+theme_override_constants/separation = 24
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Label" type="Label" parent="Panel/DisplayResolution"]
-margin_right = 141.0
-margin_bottom = 31.0
-custom_fonts/font = ExtResource( 4 )
+offset_top = 5.0
+offset_right = 144.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource( "4" )
 text = "Display resolution"
 
 [node name="OptionButton" type="OptionButton" parent="Panel/DisplayResolution"]
-margin_left = 165.0
-margin_right = 191.0
-margin_bottom = 31.0
+offset_left = 168.0
+offset_right = 197.0
+offset_bottom = 29.0
 
 [node name="ConfirmButton" type="Button" parent="Panel"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -86.5
-margin_top = -65.0
-margin_right = 86.5
-margin_bottom = -20.0
+offset_left = -16.0
+offset_top = -48.0
+offset_right = 47.0
+offset_bottom = -19.0
 text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="QuitButton" type="Button" parent="Panel"]
-margin_left = 877.0
-margin_top = 468.0
-margin_right = 950.0
-margin_bottom = 506.0
+offset_left = 928.0
+offset_top = 527.0
+offset_right = 996.0
+offset_bottom = 556.0
 text = "Quit"
 
 [node name="MenuTip" type="RichTextLabel" parent="Panel"]
-margin_left = 33.0
-margin_top = 478.0
-margin_right = 353.0
-margin_bottom = 506.0
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/normal_font = ExtResource( 6 )
-bbcode_enabled = true
-bbcode_text = "[color=#DDFFFFFF]Press [color=#DDFFFF77][Escape][/color] to toggle this menu.[/color]"
+theme_override_fonts/normal_font = ExtResource( "6" )
+theme_override_styles/focus = SubResource( "3" )
+theme_override_styles/normal = SubResource( "4" )
 text = "Press [Escape] to toggle this menu."
+bbcode_enabled = true
 
 [connection signal="item_selected" from="Panel/GraphicsQuality/OptionButton" to="." method="_on_graphics_preset_change"]
 [connection signal="item_selected" from="Panel/DisplayResolution/OptionButton" to="." method="_on_display_resolution_change"]

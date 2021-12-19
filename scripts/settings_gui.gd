@@ -40,15 +40,13 @@ const preset_descriptions = [
 # The following categories are not actually part of the Project Settings, but
 # are applied to the relevant nodes instead:
 #   - "environment"
-const presets = [
+var presets = [
 	# Low
 	{
 		"environment/glow_enabled": [false, "Disabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [false, "Disabled"],
-		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
-		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/filters/msaa": [Viewport.MSAA_DISABLED, "Disabled"],
+		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_DISABLED, "Disabled"],
 	},
 
 	# Medium
@@ -56,9 +54,7 @@ const presets = [
 		"environment/glow_enabled": [false, "Disabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [false, "Disabled"],
-		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
-		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/filters/msaa": [Viewport.MSAA_2X, "2×"],
+		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_2X, "2×"],
 	},
 
 	# High
@@ -66,9 +62,7 @@ const presets = [
 		"environment/glow_enabled": [true, "Enabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [true, "Medium-quality"],
-		"environment/ssao_blur": [Environment.SSAO_BLUR_1x1, ""],
-		"environment/ssao_quality": [Environment.SSAO_QUALITY_LOW, ""],
-		"rendering/quality/filters/msaa": [Viewport.MSAA_4X, "4×"],
+		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_4X, "4×"],
 	},
 
 	# Ultra
@@ -76,48 +70,45 @@ const presets = [
 		"environment/glow_enabled": [true, "Enabled"],
 		"environment/ss_reflections_enabled": [true, "Enabled"],
 		"environment/ssao_enabled": [true, "High-quality"],
-		"environment/ssao_blur": [Environment.SSAO_BLUR_2x2, ""],
-		"environment/ssao_quality": [Environment.SSAO_QUALITY_MEDIUM, ""],
-		"rendering/quality/filters/msaa": [Viewport.MSAA_8X, "8×"],
+		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_8X, "8×"],
 	},
 ]
 
-# The Sponza scene root
-onready var root := $"/root/Scene Root" as WorldEnvironment
+# The Sponza scene root.
+@onready var root := $"/root/Scene Root" as WorldEnvironment
 
-# The environment resource used for settings adjustments
-onready var environment := root.get_environment()
+# The environment resource used for settings adjustments.
+@onready var environment := root.get_environment()
 
-onready var graphics_blurb := $"Panel/GraphicsBlurb" as RichTextLabel
-onready var graphics_info := $"Panel/GraphicsInfo" as RichTextLabel
-onready var resolution_dropdown := $"Panel/DisplayResolution/OptionButton" as OptionButton
+@onready var graphics_blurb := $"Panel/GraphicsBlurb" as RichTextLabel
+@onready var graphics_info := $"Panel/GraphicsInfo" as RichTextLabel
+@onready var resolution_dropdown := $"Panel/DisplayResolution/OptionButton" as OptionButton
 
 
 func _ready() -> void:
-	# Initialize the project on the default preset
+	# Initialize the project on the default preset.
 	$"Panel/GraphicsQuality/OptionButton".select(default_preset)
 	_on_graphics_preset_change(default_preset)
 
-	# Cache screen size into a variable
-	var screen_size := OS.get_screen_size()
+	var screen_size := DisplayServer.screen_get_size()
 
-	# Add resolutions to the display resolution dropdown
+	# Add resolutions to the display resolution dropdown.
 	for resolution in display_resolutions:
 		if resolution.x < screen_size.x and resolution.y < screen_size.y:
 			resolution_dropdown.add_item(str(resolution.x) + "×" + str(resolution.y))
 
-	# Add a "Fullscreen" item at the end and select it by default
+	# Add a "Fullscreen" item at the end and select it by default.
 	resolution_dropdown.add_item("Fullscreen")
 	resolution_dropdown.select(resolution_dropdown.get_item_count() - 1)
 
 
 func _input(event: InputEvent) -> void:
-	# Toggle the menu when pressing Escape
+	# Toggle the menu when pressing Escape.
 	if event.is_action_pressed("toggle_menu"):
 		visible = !visible
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if visible else Input.MOUSE_MODE_CAPTURED)
 
-	# Toggle fullscreen when pressing F11 or Alt + Enter
+	# Toggle fullscreen when pressing F11 or Alt + Enter.
 	if event.is_action_pressed("toggle_fullscreen"):
 		OS.window_fullscreen = !OS.window_fullscreen
 
@@ -125,7 +116,7 @@ func _input(event: InputEvent) -> void:
 # Returns a string containing BBCode text of the preset description.
 func construct_bbcode(preset: int) -> String:
 	return """[table=2]
-[cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/quality/filters/msaa"][1]) + """[/cell]
+[cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/anti_aliasing/quality/msaa"][1]) + """[/cell]
 [cell][b]Ambient occlusion[/b][/cell] [cell]""" + str(presets[preset]["environment/ssao_enabled"][1]) + """[/cell]
 [cell][b]Bloom[/b][/cell] [cell]""" + str(presets[preset]["environment/glow_enabled"][1]) + """[/cell]
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]
@@ -133,16 +124,19 @@ func construct_bbcode(preset: int) -> String:
 
 
 func _on_graphics_preset_change(preset: int) -> void:
+	# Disable for now.
+	return
+	
 	graphics_blurb.bbcode_text = preset_descriptions[preset]
 	graphics_info.bbcode_text = construct_bbcode(preset)
 
-	# Apply settings from the preset
+	# Apply settings from the preset.
 	for setting in presets[preset]:
 		var value = presets[preset][setting][0]
 		ProjectSettings.set_setting(setting, value)
 
 		match setting:
-			# Environment settings
+			# Environment settings.
 			"environment/glow_enabled":
 				environment.glow_enabled = value
 			"environment/ss_reflections_enabled":
@@ -154,7 +148,7 @@ func _on_graphics_preset_change(preset: int) -> void:
 			"environment/ssao_quality":
 				environment.ssao_quality = value
 
-			# Project settings
+			# Project settings.
 			"rendering/quality/filters/msaa":
 				get_viewport().msaa = value
 
@@ -166,13 +160,11 @@ func _on_ConfirmButton_pressed() -> void:
 
 func _on_display_resolution_change(id: int) -> void:
 	if id < resolution_dropdown.get_item_count() - 1:
-		OS.set_window_fullscreen(false)
-		OS.set_window_size(display_resolutions[id])
-		# May be maximized automatically if the previous window size was bigger than screen size
-		OS.set_window_maximized(false)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_size(display_resolutions[id])
 	else:
-		# The last item of the OptionButton is always "Fullscreen"
-		OS.set_window_fullscreen(true)
+		# The last item of the OptionButton is always "Fullscreen".
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 
 func _on_QuitButton_pressed() -> void:

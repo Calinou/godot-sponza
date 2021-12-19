@@ -3,12 +3,12 @@
 # Copyright © 2017-2021 Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
-extends Camera
+extends Camera3D
 
 const MOUSE_SENSITIVITY = 0.002
 
-onready var settings_gui := $"../SettingsGUI" as Control
-onready var fps_counter := $"../FPSCounter" as Label
+@onready var settings_gui := $"../SettingsGUI" as Control
+@onready var fps_counter := $"../FPSCounter" as Label
 
 # The camera movement speed (tweakable using the mouse wheel)
 var move_speed := 0.5
@@ -90,7 +90,7 @@ func _process(delta: float) -> void:
 	# Add motion, apply friction and velocity
 	velocity += motion * move_speed
 	velocity *= 0.9
-	translation += velocity * delta
+	position += velocity * delta
 
 
 func _exit_tree() -> void:

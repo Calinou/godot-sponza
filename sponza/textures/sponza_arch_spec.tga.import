@@ -1,8 +1,9 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/sponza_arch_spec.tga-791bad75427500ae0fbd1f8155767334.stex"
+type="StreamTexture2D"
+uid="uid://b21xcmym2e1fo"
+path="res://.godot/imported/sponza_arch_spec.tga-791bad75427500ae0fbd1f8155767334.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,25 +11,25 @@ metadata={
 [deps]
 
 source_file="res://sponza/textures/sponza_arch_spec.tga"
-dest_files=[ "res://.import/sponza_arch_spec.tga-791bad75427500ae0fbd1f8155767334.stex" ]
+dest_files=["res://.godot/imported/sponza_arch_spec.tga-791bad75427500ae0fbd1f8155767334.stex"]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=2
-flags/repeat=0
-flags/filter=true
-flags/mipmaps=false
-flags/anisotropic=true
-flags/srgb=2
+compress/channel_pack=0
+compress/streamed=false
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
+process/normal_map_invert_y=false
 process/HDR_as_SRGB=false
-process/invert_color=false
-stream=false
-size_limit=0
-detect_3d=true
+process/size_limit=0
+detect_3d/compress_to=1
 svg/scale=1.0
