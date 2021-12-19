@@ -22,7 +22,7 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
 if you do not have Git installed.
 
-**You need [Godot 3.3.2](https://godotengine.org/article/maintenance-release-godot-3-3-2)
+**You need [Godot 3.4](https://godotengine.org/article/godot-3-4-is-released)
 or newer to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
