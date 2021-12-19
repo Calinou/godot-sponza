@@ -121,6 +121,7 @@ quality/directional_shadow/size=2048
 quality/shadow_atlas/size=2048
 quality/shading/force_vertex_shading.mobile=false
 quality/shading/force_lambert_over_burley=true
+quality/shading/use_physical_light_attenuation=true
 quality/filters/anisotropic_filter_level=8
 quality/lightmapping/use_bicubic_sampling=false
 quality/filters/msaa=3
