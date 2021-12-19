@@ -3,6 +3,8 @@
 A nice-looking 3D demo and benchmark for Godot 3.x,
 based on the Sponza from Crytek.
 
+**Looking for a Godot 4 version of this demo?** See the [`4.0-dev` branch](https://github.com/Calinou/godot-sponza/tree/4.0-dev).
+
 ![Godot 3 Sponza image 1](https://archive.hugo.pro/.public/godot-sponza/godot_3_sponza_1.jpg)
 ![Godot 3 Sponza image 2](https://archive.hugo.pro/.public/godot-sponza/godot_3_sponza_2.jpg)
 
