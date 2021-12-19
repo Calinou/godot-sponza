@@ -1,6 +1,6 @@
-# Sponza demo for Godot 3.x
+# Sponza demo for Godot 4
 
-A nice-looking 3D demo and benchmark for Godot 3.x,
+A nice-looking 3D demo and benchmark for Godot 4,
 based on the Sponza from Crytek.
 
 **Looking for a Godot 3.x version of this demo?** See the [`master` branch](https://github.com/Calinou/godot-sponza).
@@ -15,15 +15,14 @@ based on the Sponza from Crytek.
 Clone the Git repository:
 
 ```bash
-git clone https://github.com/Calinou/godot-sponza.git
+git clone --branch=4.0-dev https://github.com/Calinou/godot-sponza.git
 ```
 
 You can also
-[download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/master.zip)
+[download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/4.0-dev.zip)
 if you do not have Git installed.
 
-**You need [Godot 3.3.2](https://godotengine.org/article/maintenance-release-godot-3-3-2)
-or newer to run this demo.**
+**You need a Godot 4 development build to run this demo. You can download a nightly build [here](https://hugo.pro/projects/godot-builds/).**
 
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
@@ -34,16 +33,7 @@ the background, which would slow down the running project a lot.
 
 ### Controls
 
-- <kbd>W/S/A/D</kbd>: Move forwards/backwards/left/right
-- <kbd>Space</kbd>: Move upwards
-- <kbd>Left Shift</kbd>: Move downwards
-- <kbd>Right Mouse Button</kbd>: Speed modifier (effective when held)
-- <kbd>Mouse Wheel</kbd>: Change movement speed (always effective)
-- <kbd>Escape</kbd>: Toggle menu
-- <kbd>F1</kbd>: Toggle FPS display
-- <kbd>F3</kbd>: Toggle frame time graph
-- <kbd>F10</kbd>: Toggle mouse capture
-- <kbd>F11</kbd> or <kbd>Alt + Enter</kbd>: Toggle fullscreen
+Not reimplemented yet.
 
 ## License
 
