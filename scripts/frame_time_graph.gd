@@ -38,7 +38,7 @@ var frame_time := 0
 func _ready() -> void:
 	# Temporarily disable frametime graph until we can figure out bugs.
 	set_process(false)
-	
+
 	# Pre-allocate the `points` and `colors` arrays.
 	# This makes it possible to use `PackedVector2Array.set()` directly on them.
 	points.resize(int(rect_size.x))

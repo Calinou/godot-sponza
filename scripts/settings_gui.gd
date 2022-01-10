@@ -126,7 +126,7 @@ func construct_bbcode(preset: int) -> String:
 func _on_graphics_preset_change(preset: int) -> void:
 	# Disable for now.
 	return
-	
+
 	graphics_blurb.bbcode_text = preset_descriptions[preset]
 	graphics_info.bbcode_text = construct_bbcode(preset)
 
