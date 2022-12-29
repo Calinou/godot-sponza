@@ -41,8 +41,8 @@ func _ready() -> void:
 
 	# Pre-allocate the `points` and `colors` arrays.
 	# This makes it possible to use `PackedVector2Array.set()` directly on them.
-	points.resize(int(rect_size.x))
-	colors.resize(int(rect_size.x))
+	points.resize(int(size.x))
+	colors.resize(int(size.x))
 
 
 func _process(_delta: float) -> void:
@@ -54,18 +54,18 @@ func _process(_delta: float) -> void:
 	colors.set(frame_position, frame_color)
 	colors.set(frame_position + 1, frame_color)
 
-	frame_position = wrapi(frames_drawn * 2, 0, int(rect_size.x))
+	frame_position = wrapi(frames_drawn * 2, 0, int(size.x))
 	frame_color = gradient.interpolate(min(frame_time / 50000.0, 1.0))
 
 	# Every frame is represented as a bar that is ms × 6 pixels high
 	# Every line is a pair of two points, so every frame has two points defined
 	points.set(
 		frame_position,
-		Vector2(frame_position, int(rect_size.y))
+		Vector2(frame_position, int(size.y))
 	)
 	points.set(
 		frame_position + 1,
-		Vector2(frame_position + 1, int(rect_size.y) - frame_time * 0.006)
+		Vector2(frame_position + 1, int(size.y) - frame_time * 0.006)
 	)
 
 	# Color the current frame in white
@@ -74,7 +74,7 @@ func _process(_delta: float) -> void:
 
 	previous = Time.get_ticks_usec()
 
-	update()
+	queue_redraw()
 
 
 func _draw() -> void:
@@ -89,5 +89,5 @@ func _input(event: InputEvent) -> void:
 func _on_resized() -> void:
 	# Resize the arrays when resizing the control to avoid setting
 	# nonexistent indices once the window has been resized
-	points.resize(int(rect_size.x))
-	colors.resize(int(rect_size.x))
+	points.resize(int(size.x))
+	colors.resize(int(size.x))

@@ -1,7 +1,7 @@
 [remap]
 
 importer="font_data_dynamic"
-type="FontData"
+type="FontFile"
 uid="uid://l7i63qyh4j22"
 path="res://.godot/imported/noto_sans_semicondensed_semibold.ttf-05e6b603515511b91e6ce14c23ad0f8f.fontdata"
 
@@ -12,18 +12,22 @@ dest_files=["res://.godot/imported/noto_sans_semicondensed_semibold.ttf-05e6b603
 
 [params]
 
-antialiased=true
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
+allow_system_fallback=true
 force_autohinter=false
 hinting=1
+subpixel_positioning=1
 oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
 compress=true
-preload/char_ranges=PackedStringArray()
-preload/glyph_ranges=PackedStringArray()
-preload/configurations=PackedStringArray()
-support_overrides/language_enabled=PackedStringArray()
-support_overrides/language_disabled=PackedStringArray()
-support_overrides/script_enabled=PackedStringArray()
-support_overrides/script_disabled=PackedStringArray()
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

@@ -8,7 +8,7 @@ func _ready() -> void:
 	if lightmap_gi.visible:
 		# Hide directional light's real-time rendering to further improve performance
 		# (even though lights are already fully baked).
-		directional_light.use_in_sky_only = true
+		directional_light.sky_mode = DirectionalLight3D.SKY_MODE_SKY_ONLY
 
 		# Hide point lights to further improve performance
 		# (even though lights are already fully baked).

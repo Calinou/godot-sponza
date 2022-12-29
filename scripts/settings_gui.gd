@@ -110,7 +110,7 @@ func _input(event: InputEvent) -> void:
 
 	# Toggle fullscreen when pressing F11 or Alt + Enter.
 	if event.is_action_pressed("toggle_fullscreen"):
-		OS.window_fullscreen = !OS.window_fullscreen
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 
 # Returns a string containing BBCode text of the preset description.
