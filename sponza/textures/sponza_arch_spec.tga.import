@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/sponza_arch_spec.tga-791bad75427500ae0fbd1f81
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dfacanouflrfy"]
+
+[ext_resource type="Texture2D" uid="uid://cmytc08hduswr" path="res://sponza/textures/sponza_column_b_diff.tga" id="1_p23kf"]
+[ext_resource type="Texture2D" uid="uid://ebr4li6258pp" path="res://sponza/textures/sponza_column_b_ddn.tga" id="2_fuuma"]
+
+[resource]
+resource_name = "column_b"
+albedo_texture = ExtResource("1_p23kf")
+normal_enabled = true
+normal_texture = ExtResource("2_fuuma")
+texture_filter = 5

@@ -1,6 +1,6 @@
 # Godot Sponza: Settings GUI for tweaking graphics options
 #
-# Copyright © 2017-2021 Hugo Locurcio and contributors - MIT License
+# Copyright © 2017-present Hugo Locurcio and contributors - MIT License
 # See `LICENSE.md` included in the source distribution for details.
 
 extends Control

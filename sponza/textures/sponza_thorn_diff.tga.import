@@ -4,23 +4,22 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://4ddsefheyfvd"
 path.s3tc="res://.godot/imported/sponza_thorn_diff.tga-f61e98ea8c2d20b19753fe1bd21abf84.s3tc.ctex"
-path.etc2="res://.godot/imported/sponza_thorn_diff.tga-f61e98ea8c2d20b19753fe1bd21abf84.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://sponza/textures/sponza_thorn_diff.tga"
-dest_files=["res://.godot/imported/sponza_thorn_diff.tga-f61e98ea8c2d20b19753fe1bd21abf84.s3tc.ctex", "res://.godot/imported/sponza_thorn_diff.tga-f61e98ea8c2d20b19753fe1bd21abf84.etc2.ctex"]
+dest_files=["res://.godot/imported/sponza_thorn_diff.tga-f61e98ea8c2d20b19753fe1bd21abf84.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=true

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/sponza_floor_a_spec.tga-c7217f983b47c8d5c5eca
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false

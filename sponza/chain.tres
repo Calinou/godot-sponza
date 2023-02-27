@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cfx2ekbwhhggp"]
+
+[ext_resource type="Texture2D" uid="uid://dcxb6tmdvaoeh" path="res://sponza/textures/chain_texture.tga" id="1_eqp7h"]
+[ext_resource type="Texture2D" uid="uid://cdy41v8ops2yo" path="res://sponza/textures/chain_texture_ddn.tga" id="2_2kx3d"]
+
+[resource]
+resource_name = "chain"
+transparency = 4
+albedo_texture = ExtResource("1_eqp7h")
+normal_enabled = true
+normal_texture = ExtResource("2_2kx3d")
+texture_filter = 5

@@ -22,7 +22,7 @@ You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/4.0-dev.zip)
 if you do not have Git installed.
 
-**You need a Godot 4 development build to run this demo. You can download a nightly build [here](https://hugo.pro/projects/godot-builds/).**
+**You need Godot 4.0 or later to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
@@ -37,7 +37,7 @@ Not reimplemented yet.
 
 ## License
 
-Copyright © 2017-2021 Hugo Locurcio and contributors
+Copyright © 2017-present Hugo Locurcio and contributors
 
 - Unless otherwise specified, files in this repository are licensed under the
   MIT license, see [LICENSE.md](LICENSE.md) for more information.

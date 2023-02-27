@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b2k5wm0umiyg"]
+
+[ext_resource type="Texture2D" uid="uid://d0cd8gxluuab7" path="res://sponza/textures/sponza_fabric_diff.tga" id="1_roq6h"]
+
+[resource]
+resource_name = "fabric_a"
+albedo_texture = ExtResource("1_roq6h")
+texture_filter = 5

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cq7to4no56eux"]
+
+[ext_resource type="Texture2D" uid="uid://bp6u702m0hn1g" path="res://sponza/textures/sponza_ceiling_a_diff.tga" id="1_qqtfa"]
+
+[resource]
+resource_name = "ceiling"
+albedo_texture = ExtResource("1_qqtfa")
+texture_filter = 5

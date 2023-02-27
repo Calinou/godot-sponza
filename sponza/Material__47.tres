@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://x6ogq1unkdsl"]
+
+[resource]
+resource_name = "Material__47"
+albedo_color = Color(0.588, 0.588, 0.588, 1)
+texture_filter = 5

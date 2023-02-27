@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4mtplnrkl1as"]
+
+[ext_resource type="Texture2D" uid="uid://vaytd7kjqbwg" path="res://sponza/textures/vase_dif.tga" id="1_5avvo"]
+
+[resource]
+resource_name = "vase"
+albedo_texture = ExtResource("1_5avvo")
+texture_filter = 5

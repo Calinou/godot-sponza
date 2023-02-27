@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/vase_plant_spec.tga-4db43d546d5083140e17080c0
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false

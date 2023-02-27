@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b6sk1020hpgjf"]
+
+[ext_resource type="Texture2D" uid="uid://c5u8mhvddloaj" path="res://sponza/textures/vase_round.tga" id="1_oxsla"]
+[ext_resource type="Texture2D" uid="uid://cgqojvgx21ehy" path="res://sponza/textures/vase_round_ddn.tga" id="2_y24cy"]
+
+[resource]
+resource_name = "vase_round"
+albedo_texture = ExtResource("1_oxsla")
+normal_enabled = true
+normal_texture = ExtResource("2_y24cy")
+texture_filter = 5

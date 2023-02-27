@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cwatjyk4hqkhn"]
+
+[ext_resource type="Texture2D" uid="uid://pvlycu0rk1d4" path="res://sponza/textures/sponza_flagpole_diff.tga" id="1_tvdlb"]
+
+[resource]
+resource_name = "flagpole"
+albedo_texture = ExtResource("1_tvdlb")
+texture_filter = 5

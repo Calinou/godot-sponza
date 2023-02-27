@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cujxyiepujuat"]
+
+[ext_resource type="Texture2D" uid="uid://clipou3fhmvxj" path="res://sponza/textures/background.tga" id="1_7atb2"]
+[ext_resource type="Texture2D" uid="uid://lbhsqbq5crv6" path="res://sponza/textures/background_ddn.tga" id="2_ejjwe"]
+
+[resource]
+resource_name = "Material__298"
+albedo_texture = ExtResource("1_7atb2")
+normal_enabled = true
+normal_texture = ExtResource("2_ejjwe")
+texture_filter = 5

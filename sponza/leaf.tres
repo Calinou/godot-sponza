@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bfeekuxw8xn3c"]
+
+[ext_resource type="Texture2D" uid="uid://4ddsefheyfvd" path="res://sponza/textures/sponza_thorn_diff.tga" id="1_1xbna"]
+[ext_resource type="Texture2D" uid="uid://bjksnrd26o88d" path="res://sponza/textures/sponza_thorn_ddn.tga" id="2_wijuo"]
+
+[resource]
+resource_name = "leaf"
+transparency = 4
+albedo_texture = ExtResource("1_1xbna")
+normal_enabled = true
+normal_texture = ExtResource("2_wijuo")
+texture_filter = 5

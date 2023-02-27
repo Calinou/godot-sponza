@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cvym4sc3s4aet"]
+
+[ext_resource type="Texture2D" uid="uid://62k2ptb2o6mb" path="res://sponza/textures/spnza_bricks_a_diff.tga" id="1_3516i"]
+
+[resource]
+resource_name = "bricks"
+albedo_texture = ExtResource("1_3516i")
+normal_enabled = true
+normal_texture = ExtResource("1_3516i")
+texture_filter = 5

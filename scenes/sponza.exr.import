@@ -2,7 +2,7 @@
 
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
-uid="uid://d38auf8p0c5jh"
+uid="uid://dq3msk27a56fl"
 path="res://.godot/imported/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.ctexarray"
 metadata={
 "vram_texture": false
@@ -15,10 +15,10 @@ dest_files=["res://.godot/imported/sponza.exr-9ff222f46a95f4fa5d1af1f73e788f69.c
 
 [params]
 
-compress/mode=0
+compress/mode=3
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1

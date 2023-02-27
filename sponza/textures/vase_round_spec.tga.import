@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/vase_round_spec.tga-bb7b0c8162091e52a24ce2209
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=2
 compress/channel_pack=0
 mipmaps/generate=false
