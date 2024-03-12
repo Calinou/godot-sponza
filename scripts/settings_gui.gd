@@ -80,14 +80,14 @@ var presets = [
 # The environment resource used for settings adjustments.
 @onready var environment := root.get_environment()
 
-@onready var graphics_blurb := $"Panel/GraphicsBlurb" as RichTextLabel
-@onready var graphics_info := $"Panel/GraphicsInfo" as RichTextLabel
-@onready var resolution_dropdown := $"Panel/DisplayResolution/OptionButton" as OptionButton
+@onready var graphics_blurb := %GraphicsBlurb as RichTextLabel
+@onready var graphics_info := %GraphicsInfo as RichTextLabel
+@onready var resolution_dropdown := $"Panel/MainContainer/DisplayResolution/OptionButton" as OptionButton
 
 
 func _ready() -> void:
 	# Initialize the project on the default preset.
-	$"Panel/GraphicsQuality/OptionButton".select(default_preset)
+	$"Panel/MainContainer/GraphicsQuality/OptionButton".select(default_preset)
 	_on_graphics_preset_change(default_preset)
 
 	var screen_size := DisplayServer.screen_get_size()
@@ -100,6 +100,7 @@ func _ready() -> void:
 	# Add a "Fullscreen" item at the end and select it by default.
 	resolution_dropdown.add_item("Fullscreen")
 	resolution_dropdown.select(resolution_dropdown.get_item_count() - 1)
+	_on_display_resolution_change(resolution_dropdown.get_item_count() - 1)
 
 
 func _input(event: InputEvent) -> void:
@@ -124,9 +125,6 @@ func construct_bbcode(preset: int) -> String:
 
 
 func _on_graphics_preset_change(preset: int) -> void:
-	# Disable for now.
-	return
-
 	graphics_blurb.bbcode_text = preset_descriptions[preset]
 	graphics_info.bbcode_text = construct_bbcode(preset)
 
@@ -140,17 +138,17 @@ func _on_graphics_preset_change(preset: int) -> void:
 			"environment/glow_enabled":
 				environment.glow_enabled = value
 			"environment/ss_reflections_enabled":
-				environment.ss_reflections_enabled = value
+				environment.ssr_enabled = value
 			"environment/ssao_enabled":
 				environment.ssao_enabled = value
-			"environment/ssao_blur":
-				environment.ssao_blur = value
-			"environment/ssao_quality":
-				environment.ssao_quality = value
+			#"environment/ssao_blur":
+			#	environment.ssao_blur = value
+			#"environment/ssao_quality":
+			#	environment.ssao_quality = value
 
 			# Project settings.
 			"rendering/quality/filters/msaa":
-				get_viewport().msaa = value
+				get_viewport().msaa_3d = value
 
 
 func _on_ConfirmButton_pressed() -> void:
@@ -165,7 +163,6 @@ func _on_display_resolution_change(id: int) -> void:
 	else:
 		# The last item of the OptionButton is always "Fullscreen".
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-
 
 func _on_QuitButton_pressed() -> void:
 	get_tree().quit()
