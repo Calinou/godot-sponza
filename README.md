@@ -3,9 +3,10 @@
 A nice-looking 3D demo and benchmark for Godot 4,
 based on the Sponza from Crytek.
 
-**Looking for a Godot 3.x version of this demo?** See the [`master` branch](https://github.com/Calinou/godot-sponza).
+**Looking for a Godot 3.x version of this demo?** See the [`3.x` branch](https://github.com/Calinou/godot-sponza/tree/3.x).
 
 ![Godot 3 Sponza image 1](https://archive.hugo.pro/.public/godot-sponza/godot_3_sponza_1.jpg)
+
 ![Godot 3 Sponza image 2](https://archive.hugo.pro/.public/godot-sponza/godot_3_sponza_2.jpg)
 
 ## Try it out
@@ -15,14 +16,14 @@ based on the Sponza from Crytek.
 Clone the Git repository:
 
 ```bash
-git clone --branch=4.0-dev https://github.com/Calinou/godot-sponza.git
+git clone https://github.com/Calinou/godot-sponza.git
 ```
 
 You can also
 [download a ZIP archive](https://github.com/Calinou/godot-sponza/archive/4.0-dev.zip)
 if you do not have Git installed.
 
-**You need Godot 4.0 or later to run this demo.**
+**You need Godot 4.2 or later to run this demo.**
 
 Once you have the project files, open the Godot Project Manager, click the
 **Import** button, then select the `project.godot` file of this project.
