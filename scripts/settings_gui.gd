@@ -46,7 +46,7 @@ var presets = [
 		"environment/glow_enabled": [false, "Disabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [false, "Disabled"],
-		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_DISABLED, "Disabled"],
+		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_DISABLED, "Disabled"],
 	},
 
 	# Medium
@@ -54,7 +54,7 @@ var presets = [
 		"environment/glow_enabled": [false, "Disabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [false, "Disabled"],
-		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_2X, "2×"],
+		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_2X, "2×"],
 	},
 
 	# High
@@ -62,7 +62,7 @@ var presets = [
 		"environment/glow_enabled": [true, "Enabled"],
 		"environment/ss_reflections_enabled": [false, "Disabled"],
 		"environment/ssao_enabled": [true, "Medium-quality"],
-		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_4X, "4×"],
+		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_4X, "4×"],
 	},
 
 	# Ultra
@@ -70,7 +70,7 @@ var presets = [
 		"environment/glow_enabled": [true, "Enabled"],
 		"environment/ss_reflections_enabled": [true, "Enabled"],
 		"environment/ssao_enabled": [true, "High-quality"],
-		"rendering/anti_aliasing/quality/msaa": [Viewport.MSAA_8X, "8×"],
+		"rendering/anti_aliasing/quality/msaa_3d": [Viewport.MSAA_8X, "8×"],
 	},
 ]
 
@@ -117,7 +117,7 @@ func _input(event: InputEvent) -> void:
 # Returns a string containing BBCode text of the preset description.
 func construct_bbcode(preset: int) -> String:
 	return """[table=2]
-[cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/anti_aliasing/quality/msaa"][1]) + """[/cell]
+[cell][b]Anti-aliasing (MSAA)[/b][/cell] [cell]""" + str(presets[preset]["rendering/anti_aliasing/quality/msaa_3d"][1]) + """[/cell]
 [cell][b]Ambient occlusion[/b][/cell] [cell]""" + str(presets[preset]["environment/ssao_enabled"][1]) + """[/cell]
 [cell][b]Bloom[/b][/cell] [cell]""" + str(presets[preset]["environment/glow_enabled"][1]) + """[/cell]
 [cell][b]Screen-space reflections[/b][/cell] [cell]""" + str(presets[preset]["environment/ss_reflections_enabled"][1]) + """[/cell]
@@ -147,7 +147,7 @@ func _on_graphics_preset_change(preset: int) -> void:
 			#	environment.ssao_quality = value
 
 			# Project settings.
-			"rendering/quality/filters/msaa":
+			"rendering/anti_aliasing/quality/msaa_3d":
 				get_viewport().msaa_3d = value
 
 
