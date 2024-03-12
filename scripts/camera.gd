@@ -25,7 +25,7 @@ var initial_rotation := rotation.y
 
 func _input(event: InputEvent) -> void:
 	# Mouse look (effective only if the mouse is captured).
-	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		# Horizontal mouse look.
 		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
 		# Vertical mouse look, clamped to -90..90 degrees.
@@ -39,10 +39,7 @@ func _input(event: InputEvent) -> void:
 	if not settings_gui.visible:
 		# Toggle mouse capture (only while the menu is not visible).
 		if event.is_action_pressed("toggle_mouse_capture"):
-			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			else:
-				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED else Input.MOUSE_MODE_CAPTURED
 
 		if event.is_action_pressed("movement_speed_increase"):
 			move_speed = min(1.5, move_speed + 0.1)

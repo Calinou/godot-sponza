@@ -106,12 +106,12 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	# Toggle the menu when pressing Escape.
 	if event.is_action_pressed("toggle_menu"):
-		visible = !visible
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE if visible else Input.MOUSE_MODE_CAPTURED)
+		visible = not visible
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if visible else Input.MOUSE_MODE_CAPTURED
 
 	# Toggle fullscreen when pressing F11 or Alt + Enter.
 	if event.is_action_pressed("toggle_fullscreen"):
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN else DisplayServer.WINDOW_MODE_FULLSCREEN)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN else DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 
 
 # Returns a string containing BBCode text of the preset description.
@@ -153,7 +153,7 @@ func _on_graphics_preset_change(preset: int) -> void:
 
 func _on_ConfirmButton_pressed() -> void:
 	visible = false
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
 func _on_display_resolution_change(id: int) -> void:

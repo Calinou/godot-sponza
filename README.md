@@ -34,7 +34,14 @@ the background, which would slow down the running project a lot.
 
 ### Controls
 
-Not reimplemented yet.
+- <kbd>W</kbd>/<kbd>A</kbd>/<kbd>S</kbd>/<kbd>D</kbd>/<kbd>Space</kbd>/<kbd>Shift</kbd> or arrow keys: Move
+- <kbd>Right mouse button</kbd> (hold): Speed modifier
+- <kbd>Mouse wheel</kbd>: Change movement speed
+- <kbd>Escape</kbd>: Show menu
+- <kbd>F1</kbd>: Toggle FPS display
+- <kbd>F10</kbd>: Toggle mouse capture
+- <kbd>F11</kbd>: Toggle fullscreen
+<!-- - <kbd>F3</kbd>: Show frametime graph (currently broken) --!
 
 ## License
 
