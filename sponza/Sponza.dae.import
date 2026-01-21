@@ -15,9 +15,11 @@ dest_files=["res://.godot/imported/Sponza.dae-a161e2224a3a973c5f9f90d5ce6bb52a.s
 
 nodes/root_type="Spatial"
 nodes/root_name="Scene Root"
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=0.125
 nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=false
 meshes/generate_lods=false
@@ -32,107 +34,135 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "materials": {
 "Material__25": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/Material__25.tres"
+"use_external/fallback_path": "res://sponza/Material__25.tres",
+"use_external/path": "uid://hs2ob5edfwom"
 },
 "Material__298": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/Material__298.tres"
+"use_external/fallback_path": "res://sponza/Material__298.tres",
+"use_external/path": "uid://cujxyiepujuat"
 },
 "Material__47": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/Material__47.tres"
+"use_external/fallback_path": "res://sponza/Material__47.tres",
+"use_external/path": "uid://x6ogq1unkdsl"
 },
 "Material__57": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/Material__57.tres"
+"use_external/fallback_path": "res://sponza/Material__57.tres",
+"use_external/path": "uid://cj1vtf8mboe12"
 },
 "arch": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/arch.tres"
+"use_external/fallback_path": "res://sponza/arch.tres",
+"use_external/path": "uid://bxra8tljpa4eg"
 },
 "bricks": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/bricks.tres"
+"use_external/fallback_path": "res://sponza/bricks.tres",
+"use_external/path": "uid://cvym4sc3s4aet"
 },
 "ceiling": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/ceiling.tres"
+"use_external/fallback_path": "res://sponza/ceiling.tres",
+"use_external/path": "uid://cq7to4no56eux"
 },
 "chain": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/chain.tres"
+"use_external/fallback_path": "res://sponza/chain.tres",
+"use_external/path": "uid://cfx2ekbwhhggp"
 },
 "column_a": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/column_a.tres"
+"use_external/fallback_path": "res://sponza/column_a.tres",
+"use_external/path": "uid://ucu8bs3r1jif"
 },
 "column_b": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/column_b.tres"
+"use_external/fallback_path": "res://sponza/column_b.tres",
+"use_external/path": "uid://dfacanouflrfy"
 },
 "column_c": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/column_c.tres"
+"use_external/fallback_path": "res://sponza/column_c.tres",
+"use_external/path": "uid://bc543ekonhvyf"
 },
 "details": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/details.tres"
+"use_external/fallback_path": "res://sponza/details.tres",
+"use_external/path": "uid://bxledl2mfrmyo"
 },
 "fabric_a": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_a.tres"
+"use_external/fallback_path": "res://sponza/fabric_a.tres",
+"use_external/path": "uid://b2k5wm0umiyg"
 },
 "fabric_c": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_c.tres"
+"use_external/fallback_path": "res://sponza/fabric_c.tres",
+"use_external/path": "uid://bgrv88wce7ond"
 },
 "fabric_d": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_d.tres"
+"use_external/fallback_path": "res://sponza/fabric_d.tres",
+"use_external/path": "uid://1b35kbua7c1l"
 },
 "fabric_e": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_e.tres"
+"use_external/fallback_path": "res://sponza/fabric_e.tres",
+"use_external/path": "uid://dxghi28dk231n"
 },
 "fabric_f": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_f.tres"
+"use_external/fallback_path": "res://sponza/fabric_f.tres",
+"use_external/path": "uid://wob3ru8lvm6t"
 },
 "fabric_g": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/fabric_g.tres"
+"use_external/fallback_path": "res://sponza/fabric_g.tres",
+"use_external/path": "uid://yyr032hvmw4v"
 },
 "flagpole": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/flagpole.tres"
+"use_external/fallback_path": "res://sponza/flagpole.tres",
+"use_external/path": "uid://cwatjyk4hqkhn"
 },
 "floor": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/floor.tres"
+"use_external/fallback_path": "res://sponza/floor.tres",
+"use_external/path": "uid://lgwhv3agifiw"
 },
 "leaf": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/leaf.tres"
+"use_external/fallback_path": "res://sponza/leaf.tres",
+"use_external/path": "uid://bfeekuxw8xn3c"
 },
 "roof": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/roof.tres"
+"use_external/fallback_path": "res://sponza/roof.tres",
+"use_external/path": "uid://c4tpifbg7wrtp"
 },
 "vase": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/vase.tres"
+"use_external/fallback_path": "res://sponza/vase.tres",
+"use_external/path": "uid://b4mtplnrkl1as"
 },
 "vase_hanging": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/vase_hanging.tres"
+"use_external/fallback_path": "res://sponza/vase_hanging.tres",
+"use_external/path": "uid://cd4pd12nq12s5"
 },
 "vase_round": {
 "use_external/enabled": true,
-"use_external/path": "res://sponza/vase_round.tres"
+"use_external/fallback_path": "res://sponza/vase_round.tres",
+"use_external/path": "uid://b6sk1020hpgjf"
 }
 }
 }

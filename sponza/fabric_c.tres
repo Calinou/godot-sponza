@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bgrv88wce7ond"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bgrv88wce7ond"]
 
 [ext_resource type="Texture2D" uid="uid://o4gr4nm52rlo" path="res://sponza/textures/sponza_curtain_diff.tga" id="1_pw5sx"]
 

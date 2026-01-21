@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfjh4s01g77bl"]
+[gd_scene format=3 uid="uid://dfjh4s01g77bl"]
 
 [ext_resource type="Script" uid="uid://bps70ov5psyns" path="res://scripts/settings_gui.gd" id="2"]
-[ext_resource type="FontFile" path="res://resources/fonts/title.tres" id="3"]
-[ext_resource type="FontFile" path="res://resources/fonts/text_strong.tres" id="4"]
-[ext_resource type="FontFile" path="res://resources/fonts/text.tres" id="5"]
-[ext_resource type="FontFile" path="res://resources/fonts/text_small.tres" id="6"]
+[ext_resource type="FontFile" uid="uid://d3o8ixpbn2jl4" path="res://resources/fonts/title.tres" id="3"]
+[ext_resource type="FontFile" uid="uid://cergyijeff15d" path="res://resources/fonts/text_strong.tres" id="4"]
+[ext_resource type="FontFile" uid="uid://bs627f5tfe1tn" path="res://resources/fonts/text.tres" id="5"]
+[ext_resource type="FontFile" uid="uid://b5wsx2atc8ypf" path="res://resources/fonts/text_small.tres" id="6"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0.0627451, 0.0627451, 0.0627451, 0.501961)
@@ -31,11 +31,11 @@ border_color = Color(0.0627451, 0.0627451, 0.0627451, 0.54902)
 corner_detail = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id="3"]
-
 [sub_resource type="StyleBoxEmpty" id="4"]
 
-[node name="SettingsGUI" type="Control"]
+[sub_resource type="StyleBoxEmpty" id="3"]
+
+[node name="SettingsGUI" type="Control" unique_id=1617594249]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1454565842]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -54,34 +54,34 @@ offset_right = -176.0
 offset_bottom = -74.0
 theme_override_styles/panel = SubResource("1")
 
-[node name="MainContainer" type="VBoxContainer" parent="Panel"]
+[node name="MainContainer" type="VBoxContainer" parent="Panel" unique_id=1721902724]
 layout_mode = 0
 offset_left = 50.0
 offset_top = 50.0
 offset_right = 750.0
 offset_bottom = 458.0
 
-[node name="WelcomeTitle" type="Label" parent="Panel/MainContainer"]
+[node name="WelcomeTitle" type="Label" parent="Panel/MainContainer" unique_id=1534661645]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3")
 theme_override_font_sizes/font_size = 16
 text = "Welcome"
 
-[node name="WelcomeText" type="Label" parent="Panel/MainContainer"]
+[node name="WelcomeText" type="Label" parent="Panel/MainContainer" unique_id=898177707]
 layout_mode = 2
 text = "This Sponza demo showcases the capabilities of the Godot 4 renderer.
 Please choose a preset suited to your hardware below:"
 
-[node name="GraphicsQuality" type="HBoxContainer" parent="Panel/MainContainer"]
+[node name="GraphicsQuality" type="HBoxContainer" parent="Panel/MainContainer" unique_id=437124144]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="Panel/MainContainer/GraphicsQuality"]
+[node name="Label" type="Label" parent="Panel/MainContainer/GraphicsQuality" unique_id=761966698]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4")
 text = "Graphics quality"
 
-[node name="OptionButton" type="OptionButton" parent="Panel/MainContainer/GraphicsQuality"]
+[node name="OptionButton" type="OptionButton" parent="Panel/MainContainer/GraphicsQuality" unique_id=740287426]
 layout_mode = 2
 item_count = 4
 popup/item_0/text = "Low"
@@ -93,61 +93,61 @@ popup/item_2/id = 2
 popup/item_3/text = "Ultra"
 popup/item_3/id = 3
 
-[node name="GraphicsBlurb" type="RichTextLabel" parent="Panel/MainContainer"]
+[node name="GraphicsBlurb" type="RichTextLabel" parent="Panel/MainContainer" unique_id=1310437337]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(700, 50)
 layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("5")
 theme_override_fonts/bold_font = ExtResource("4")
-theme_override_styles/focus = SubResource("2")
 theme_override_styles/normal = SubResource("2")
+theme_override_styles/focus = SubResource("2")
 bbcode_enabled = true
 
-[node name="GraphicsInfo" type="RichTextLabel" parent="Panel/MainContainer"]
+[node name="GraphicsInfo" type="RichTextLabel" parent="Panel/MainContainer" unique_id=553932174]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 theme_override_constants/line_separation = 2
 theme_override_fonts/normal_font = ExtResource("5")
 theme_override_fonts/bold_font = ExtResource("4")
-theme_override_styles/focus = SubResource("2")
 theme_override_styles/normal = SubResource("2")
+theme_override_styles/focus = SubResource("2")
 bbcode_enabled = true
 
-[node name="DisplayText" type="Label" parent="Panel/MainContainer"]
+[node name="DisplayText" type="Label" parent="Panel/MainContainer" unique_id=1132679781]
 layout_mode = 2
 text = "For more reproducible benchmarks, choose a display resolution:"
 
-[node name="DisplayResolution" type="HBoxContainer" parent="Panel/MainContainer"]
+[node name="DisplayResolution" type="HBoxContainer" parent="Panel/MainContainer" unique_id=2138969654]
 layout_mode = 2
 theme_override_constants/separation = 24
 
-[node name="Label" type="Label" parent="Panel/MainContainer/DisplayResolution"]
+[node name="Label" type="Label" parent="Panel/MainContainer/DisplayResolution" unique_id=325413458]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4")
 text = "Display resolution"
 
-[node name="OptionButton" type="OptionButton" parent="Panel/MainContainer/DisplayResolution"]
+[node name="OptionButton" type="OptionButton" parent="Panel/MainContainer/DisplayResolution" unique_id=33401098]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MainContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MainContainer" unique_id=1276892008]
 layout_mode = 2
 alignment = 1
 
-[node name="ConfirmButton" type="Button" parent="Panel/MainContainer/HBoxContainer"]
+[node name="ConfirmButton" type="Button" parent="Panel/MainContainer/HBoxContainer" unique_id=88424845]
 layout_mode = 2
 text = "OK"
 
-[node name="QuitButton" type="Button" parent="Panel/MainContainer/HBoxContainer"]
+[node name="QuitButton" type="Button" parent="Panel/MainContainer/HBoxContainer" unique_id=172071748]
 layout_mode = 2
 text = "Quit"
 
-[node name="MenuTip" type="RichTextLabel" parent="Panel"]
+[node name="MenuTip" type="RichTextLabel" parent="Panel" unique_id=270728096]
 layout_mode = 0
 theme_override_fonts/normal_font = ExtResource("6")
-theme_override_styles/focus = SubResource("3")
 theme_override_styles/normal = SubResource("4")
+theme_override_styles/focus = SubResource("3")
 bbcode_enabled = true
 text = "Press [Escape] to toggle this menu."
 
